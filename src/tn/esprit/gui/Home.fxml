@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="847.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="workshop_jdbc_4se1.HomeController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="20.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="848.0" />
+      <Button layoutX="634.0" layoutY="50.0" mnemonicParsing="false" onAction="#editCircuit" text="Select" />
+      <Button layoutX="93.0" layoutY="475.0" mnemonicParsing="false" onAction="#saveEditedCircuit" text="SaveEdit" />
+      <Label layoutX="39.0" layoutY="102.0" text="Depart Point :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="depart1" layoutX="39.0" layoutY="150.0" text="Depart d'arrive :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="depart11" layoutX="39.0" layoutY="200.0" text="Categorie:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="depart111" layoutX="39.0" layoutY="248.0" text="Prix:" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="start" layoutX="165.0" layoutY="100.0" />
+      <TextField fx:id="end" layoutX="165.0" layoutY="147.0" />
+      <TextField fx:id="time" layoutX="165.0" layoutY="197.0" />
+      <TextField fx:id="price" layoutX="165.0" layoutY="245.0" />
+      <Label fx:id="depart1111" layoutX="39.0" layoutY="294.0" text="Temps :" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="33.0" layoutY="475.0" mnemonicParsing="false" onAction="#addCircuit" text="Add" />
+      <TextField fx:id="category" layoutX="165.0" layoutY="291.0" />
+      <ListView fx:id="listv" layoutX="504.0" layoutY="88.0" prefHeight="386.0" prefWidth="307.0" />
+      <Button layoutX="178.0" layoutY="475.0" mnemonicParsing="false" onAction="#DeleteCircuit" text="Delete" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="20.0" layoutX="-1.0" layoutY="519.0" stroke="BLACK" strokeType="INSIDE" width="848.0" />
+      <Button layoutX="779.0" layoutY="20.0" minWidth="30.0" mnemonicParsing="false" onAction="#returnPage" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: RED;" text="X" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Agency FB Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
