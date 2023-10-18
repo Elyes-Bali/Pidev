@@ -15,10 +15,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.geometry.Insets;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import tn.esprit.entity.Circuit;
 import tn.esprit.services.ServiceCircuit;
@@ -30,27 +33,42 @@ import tn.esprit.services.ServiceCircuit;
  */
 public class ListeController implements Initializable {
 
-    @FXML
-    private ListView<Circuit> listev;
+    
     private ObservableList<Circuit> circuitList = FXCollections.observableArrayList();
+    @FXML
+    private VBox cardContainer;
+    @FXML
+    private HBox viewing;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         loadInitialDataFromDatabase();
-        listev.setItems(circuitList);
+        
         // TODO
     }    
-        private void loadInitialDataFromDatabase() {
-    ServiceCircuit ps = new ServiceCircuit();
-    List<Circuit> initialCircuits = ps.afficher();
-    
-    // Populate circuitList with the initial data from the database
-    circuitList.clear();
-    circuitList.addAll(initialCircuits);
-}
+  private void loadInitialDataFromDatabase() {
+        ServiceCircuit ps = new ServiceCircuit();
+        List<Circuit> initialCircuits = ps.afficher();
 
+        // Create and display cards for each Circuit
+        for (Circuit circuit : initialCircuits) {
+            try {
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("/tn/esprit/gui/Card.fxml"));
+    Parent cardLayout = loader.load();
+    CardController cardController = loader.getController();
+    cardController.initializeCard(circuit);
+    // Add vertical margin to create space between cards
+            VBox.setMargin(cardLayout, new Insets(10, 0, 0, 0));
+    cardContainer.getChildren().add(cardLayout);
+} catch (IOException ex) {
+    ex.printStackTrace();
+}
+        }
+    }
+
+           
     @FXML
     private void returnHome(ActionEvent event) {
         try {

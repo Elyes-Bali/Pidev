@@ -68,7 +68,22 @@ public class ServiceCircuit implements IService<Circuit> {
 
     @Override
     public void modifier(Circuit t) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try {
+        String req = "UPDATE circuit SET prix=?, depart=?, arrive=?, categorie=?, temps=?, description=? WHERE id=?";
+        PreparedStatement pre = con.prepareStatement(req);
+       pre.setInt(1, t.getPrix());
+pre.setString(2, t.getDepart());
+pre.setString(3, t.getArrive());
+pre.setString(4, t.getCategorie());
+pre.setString(5, t.getTemps());
+pre.setString(6, t.getDescription());
+pre.setInt(7, t.getId());  // This should be the 7th parameter.
+
+
+        pre.executeUpdate();
+    } catch (SQLException ex) {
+        System.out.println(ex);
+    } //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override

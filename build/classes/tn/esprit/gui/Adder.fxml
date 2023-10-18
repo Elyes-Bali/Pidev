@@ -12,7 +12,7 @@
 <AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.gui.AdderController">
     <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ff1f1f" height="20.0" layoutX="-1.0" stroke="BLACK" strokeType="INSIDE" width="848.0" />
-      <Button layoutX="634.0" layoutY="50.0" mnemonicParsing="false" onAction="#editCircuit" text="Select" />
+    
       <Button layoutX="93.0" layoutY="475.0" mnemonicParsing="false" onAction="#saveEditedCircuit" text="SaveEdit" />
       <Label layoutX="39.0" layoutY="102.0" text="Point de depart:" textAlignment="CENTER">
          <font>
@@ -24,7 +24,7 @@
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <Label fx:id="depart11" layoutX="39.0" layoutY="200.0" text="Categorie:" textAlignment="CENTER">
+      <Label fx:id="depart11" layoutX="39.0" layoutY="200.0" text="Temps :" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
@@ -38,7 +38,7 @@
       <TextField fx:id="end" layoutX="165.0" layoutY="147.0" />
       <TextField fx:id="time" layoutX="165.0" layoutY="197.0" />
       <TextField fx:id="price" layoutX="165.0" layoutY="245.0" />
-      <Label fx:id="depart1111" layoutX="39.0" layoutY="294.0" text="Temps :" textAlignment="CENTER">
+      <Label fx:id="depart1111" layoutX="39.0" layoutY="294.0" text="Categorie:" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>

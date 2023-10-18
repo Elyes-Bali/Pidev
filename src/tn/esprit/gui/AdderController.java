@@ -8,6 +8,7 @@ package tn.esprit.gui;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
+import java.util.Optional;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -18,6 +19,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -50,8 +53,7 @@ public class AdderController implements Initializable {
    
     @FXML
     private TextArea descripting;
-    
-    
+  
     
     /**
      * Initializes the controller class.
@@ -60,6 +62,21 @@ public class AdderController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
          loadInitialDataFromDatabase();
         listv.setItems(circuitList);
+        
+         listv.setOnMouseClicked(event -> {
+        if (event.getClickCount() == 2) { // Double-click event
+            Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
+            if (selectedCircuit != null) {
+                // Populate the TextFields with the selected item's data
+                start.setText(selectedCircuit.getDepart());
+                end.setText(selectedCircuit.getArrive());
+                time.setText(selectedCircuit.getTemps());
+                price.setText(Integer.toString(selectedCircuit.getPrix()));
+                category.setText(selectedCircuit.getCategorie());
+                descripting.setText(selectedCircuit.getDescription());
+            }
+        }
+    });
         // TODO
     }    
       private void loadInitialDataFromDatabase() {
@@ -71,30 +88,31 @@ public class AdderController implements Initializable {
     circuitList.addAll(initialCircuits);
 }
 
-    @FXML
-    private void editCircuit(ActionEvent event) {
-        Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
+  //  @FXML
+   // private void editCircuit(ActionEvent event) {
+   //    Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
     
     // Check if an item is selected
-    if (selectedCircuit == null) {
-        System.out.println("No item selected for editing.");
-        return;
-    }
+   // if (selectedCircuit == null) {
+     //   System.out.println("No item selected for editing.");
+    //    return;
+   // }
     
     // Populate the TextFields with the selected item's data
-    start.setText(selectedCircuit.getDepart());
-    end.setText(selectedCircuit.getArrive());
-    time.setText(selectedCircuit.getTemps());
-    price.setText(Integer.toString(selectedCircuit.getPrix())); // Convert int to String
-    category.setText(selectedCircuit.getCategorie());    
-    descripting.setText(selectedCircuit.getDescription());
+  //  start.setText(selectedCircuit.getDepart());
+ //   end.setText(selectedCircuit.getArrive());
+  //  time.setText(selectedCircuit.getTemps());
+  //  price.setText(Integer.toString(selectedCircuit.getPrix())); // Convert int to String
+  //  category.setText(selectedCircuit.getCategorie());    
+  //  descripting.setText(selectedCircuit.getDescription());
 
-    }
+  // }
 
-    @FXML
-    private void saveEditedCircuit(ActionEvent event) {
-         Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
-    
+      
+   @FXML
+private void saveEditedCircuit(ActionEvent event) {
+    Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
+
     // Check if an item is selected
     if (selectedCircuit == null) {
         System.out.println("No item selected for editing.");
@@ -106,8 +124,6 @@ public class AdderController implements Initializable {
     selectedCircuit.setArrive(end.getText());
     selectedCircuit.setTemps(time.getText());    
     selectedCircuit.setDescription(descripting.getText());    
-    
-
 
     try {
         int editedPrix = Integer.parseInt(price.getText());
@@ -119,39 +135,55 @@ public class AdderController implements Initializable {
     }
     
     selectedCircuit.setCategorie(category.getText());
-    
+
+    // Ensure that the id is set before modifying
+    selectedCircuit.setId(selectedCircuit.getId()); // You might not need this line if the id is already set.
+
+    // Call the modifier method
+    ServiceCircuit ps = new ServiceCircuit();
+    ps.modifier(selectedCircuit);
+
     // Clear the TextFields after saving
     clearTextFields();
-     // Refresh the ListView to reflect the changes
-    listv.setItems(null); // Clear the items
-    listv.setItems(circuitList); // Set the items again
-    }
+
+    // Refresh the ListView to reflect the changes
+    listv.refresh();
+}
+    
+
 
     @FXML
     private void addCircuit(ActionEvent event) {
-          String depart = start.getText();        
-        String arrive = end.getText();        
-        String temps = time.getText();
-        String prixStr = price.getText();
-        String categorie = category.getText();        
-        String description = descripting.getText();
+        String depart = start.getText();
+    String arrive = end.getText();
+    String temps = time.getText();
+    String prixStr = price.getText();
+    String categorie = category.getText();
+    String description = descripting.getText();
 
-        ServiceCircuit ps = new ServiceCircuit();
-        int prix;
+   
+
+    int prix;
     try {
         prix = Integer.parseInt(prixStr);
     } catch (NumberFormatException e) {
         // Handle the case where prixStr is not a valid integer
-        // You can display an error message or take appropriate action here.
-        System.out.println("Invalid prix value: " + prixStr);
-        return; // Exit the method or handle the error as needed.
-    }
-  
-        Circuit p = new Circuit(depart,arrive,temps,categorie,prix,description);
+       displayAlert("Invalid Input", "Prix value is not a valid integer.");
         
-       
-        ps.ajouter(p);
-           List<Circuit> updatedCircuits = ps.afficher();
+        return;
+    }
+     // Validate input
+     // Validate input
+    if (depart.isEmpty() || arrive.isEmpty() || temps.isEmpty() || prixStr.isEmpty() || categorie.isEmpty() || description.isEmpty()) {
+        displayAlert("Missing Information", "Please fill in all fields.");
+        return;
+    }
+
+    ServiceCircuit ps = new ServiceCircuit();
+    Circuit p = new Circuit(depart, arrive, temps, categorie, prix, description);
+
+    ps.ajouter(p);
+    List<Circuit> updatedCircuits = ps.afficher();
 
     // Update circuitList with the new data
     circuitList.clear();
@@ -159,32 +191,50 @@ public class AdderController implements Initializable {
 
     // Set the ListView items to circuitList to reflect the updated data
     listv.setItems(circuitList);
+    System.out.println("Success");
 
     // Clear the TextFields after saving
     clearTextFields();
     
     }
+    
+    private void displayAlert(String title, String content) {
+    Alert alert = new Alert(Alert.AlertType.WARNING);
+    alert.setTitle(title);
+    alert.setHeaderText(null);
+    alert.setContentText(content);
+    alert.showAndWait();
+}
 
     @FXML
     private void DeleteCircuit(ActionEvent event) {
-           // Retrieve the selected item from the ListView
+        // Retrieve the selected item from the ListView
     Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
 
     // Check if an item is selected
     if (selectedCircuit == null) {
-        System.out.println("No item selected for deletion.");
+        displayAlert("No Item Selected", "No item selected for deletion.");
         return;
     }
 
-    // Remove the selected item from the database
-    ServiceCircuit ps = new ServiceCircuit();
-    ps.supprimer(selectedCircuit);
+    // Display a confirmation alert
+    Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    alert.setTitle("Confirm Delete");
+    alert.setHeaderText(null);
+    alert.setContentText("Are you sure you want to delete this circuit?");
+    Optional<ButtonType> result = alert.showAndWait();
 
-    // Remove the selected item from the ListView
-    circuitList.remove(selectedCircuit);
+    if (result.isPresent() && result.get() == ButtonType.OK) {
+        // Remove the selected item from the database
+        ServiceCircuit ps = new ServiceCircuit();
+        ps.supprimer(selectedCircuit);
 
-    // Clear the TextFields after deleting
-    clearTextFields();
+        // Remove the selected item from the ListView
+        circuitList.remove(selectedCircuit);
+
+        // Clear the TextFields after deleting
+        clearTextFields();
+    }
     }
 
     @FXML
