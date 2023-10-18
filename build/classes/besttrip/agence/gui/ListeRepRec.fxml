@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="besttrip.agence.gui.ListeRepRecController">
+    <stylesheets>
+        <URL value="@listereprec.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="button" layoutX="10.0" layoutY="10.0" prefHeight="645.0" prefWidth="924.0" styleClass="mainFxmlClass">
+         <stylesheets>
+            <URL value="@listereclamationadmin.css" />
+         </stylesheets>
+         <children>
+            <AnchorPane prefHeight="124.0" prefWidth="924.0" style="-fx-background-color: #3F7B79;">
+               <children>
+                  <Label layoutX="257.0" layoutY="19.0" prefHeight="86.0" prefWidth="411.0" text="Liste des réponses des &#10;réclamations&#10;" textAlignment="CENTER" textFill="#fcfcfc" wrapText="true">
+                     <font>
+                        <Font name="Arial Bold" size="35.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <Button layoutX="14.0" layoutY="139.0" mnemonicParsing="false" onAction="#buttonRetourListeRep" prefHeight="39.0" prefWidth="71.0" style="-fx-background-radius: 10;" text="Retour">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <ListView fx:id="ListeReponseAdmin" layoutX="102.0" layoutY="193.0" prefHeight="411.0" prefWidth="808.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
