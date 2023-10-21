@@ -20,11 +20,16 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import tn.esprit.entity.Circuit;
 import tn.esprit.services.ServiceCircuit;
@@ -46,13 +51,37 @@ public class AdderController implements Initializable {
     
     @FXML
     private TextField category;
-      @FXML
-    private ListView<Circuit> listv;
     
      private ObservableList<Circuit> circuitList = FXCollections.observableArrayList();
    
     @FXML
     private TextArea descripting;
+  
+    @FXML
+    private Button idDelete;
+    @FXML
+    private Button idEdite;
+  
+    @FXML
+    private Button idAjoute;
+ 
+  
+    @FXML
+    private TableView<Circuit> idTable;
+    @FXML
+    private TableColumn<Circuit, String> departColumn;
+    @FXML
+    private TableColumn<Circuit, String> arriveColumn;
+    @FXML
+    private TableColumn<Circuit, String> prixColumn;
+    @FXML
+    private TableColumn<Circuit, String> tempsColumn;
+    @FXML
+    private TableColumn<Circuit, String> categorieColumn;
+    @FXML
+    private TableColumn<Circuit, String> descriptionColumn;
+    
+   
   
     
     /**
@@ -61,11 +90,17 @@ public class AdderController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
          loadInitialDataFromDatabase();
-        listv.setItems(circuitList);
+        idTable.setItems(circuitList);
+         departColumn.setCellValueFactory(new PropertyValueFactory<>("depart"));
+    arriveColumn.setCellValueFactory(new PropertyValueFactory<>("arrive"));
+    tempsColumn.setCellValueFactory(new PropertyValueFactory<>("temps"));
+    prixColumn.setCellValueFactory(new PropertyValueFactory<>("prix"));
+    categorieColumn.setCellValueFactory(new PropertyValueFactory<>("categorie"));
+    descriptionColumn.setCellValueFactory(new PropertyValueFactory<>("description"));
         
-         listv.setOnMouseClicked(event -> {
+         idTable.setOnMouseClicked(event -> {
         if (event.getClickCount() == 2) { // Double-click event
-            Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
+            Circuit selectedCircuit = idTable.getSelectionModel().getSelectedItem();
             if (selectedCircuit != null) {
                 // Populate the TextFields with the selected item's data
                 start.setText(selectedCircuit.getDepart());
@@ -77,11 +112,21 @@ public class AdderController implements Initializable {
             }
         }
     });
+         
+         ImageView imageView1 = new ImageView(getClass().getResource("/images/delete.png").toExternalForm());
+         idDelete.setGraphic(imageView1);
+          ImageView imageView2 = new ImageView(getClass().getResource("/images/edite.png").toExternalForm());
+         idEdite.setGraphic(imageView2);
+          ImageView imageView3 = new ImageView(getClass().getResource("/images/add.png").toExternalForm());
+         idAjoute.setGraphic(imageView3);
         // TODO
     }    
       private void loadInitialDataFromDatabase() {
     ServiceCircuit ps = new ServiceCircuit();
-    List<Circuit> initialCircuits = ps.afficher();
+    List<Circuit> initialCircuits = ps.afficher();    
+   
+
+    
     
     // Populate circuitList with the initial data from the database
     circuitList.clear();
@@ -111,7 +156,7 @@ public class AdderController implements Initializable {
       
    @FXML
 private void saveEditedCircuit(ActionEvent event) {
-    Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
+    Circuit selectedCircuit = idTable.getSelectionModel().getSelectedItem();
 
     // Check if an item is selected
     if (selectedCircuit == null) {
@@ -147,7 +192,7 @@ private void saveEditedCircuit(ActionEvent event) {
     clearTextFields();
 
     // Refresh the ListView to reflect the changes
-    listv.refresh();
+    idTable.refresh();
 }
     
 
@@ -190,7 +235,7 @@ private void saveEditedCircuit(ActionEvent event) {
     circuitList.addAll(updatedCircuits);
 
     // Set the ListView items to circuitList to reflect the updated data
-    listv.setItems(circuitList);
+    idTable.setItems(circuitList);
     System.out.println("Success");
 
     // Clear the TextFields after saving
@@ -209,7 +254,7 @@ private void saveEditedCircuit(ActionEvent event) {
     @FXML
     private void DeleteCircuit(ActionEvent event) {
         // Retrieve the selected item from the ListView
-    Circuit selectedCircuit = listv.getSelectionModel().getSelectedItem();
+    Circuit selectedCircuit = idTable.getSelectionModel().getSelectedItem();
 
     // Check if an item is selected
     if (selectedCircuit == null) {
