@@ -5,6 +5,7 @@
  */
 package besttrip.agence.gui;
 
+import Besttrip.agence.entity.User;
 import besttrip.agence.entity.Reclamation;
 import besttrip.agence.entity.ReponseReclamation;
 import besttrip.agence.services.ServiceRepRec;
@@ -86,10 +87,25 @@ public class ListeReclamationAdminController implements Initializable {
     @FXML
     private void buttonEnvoyerRepRec(ActionEvent event) {      
         String textRepRec  = ReponceRecAdmin.getText();
-
+       // Replace with the appropriate method to get the user by ID
+        Reclamation reclamation = ListeRecAdmin.getSelectionModel().getSelectedItem();
         ServiceRepRec ps = new ServiceRepRec();
-        ReponseReclamation p = new ReponseReclamation(textRepRec,"dsxf", 1102, 7);       
+      if (reclamation != null) {
+        int idRec = reclamation.getIdRec();
+        User user = User.getUserById(reclamation.getIdU());
+
+        if (user != null) {
+            String Prenom = user.getPrenom();
+            String intitule = ps.getIntituleByIdRec(idRec);
+            System.out.println("intitule: " + intitule);
+        
+        ReponseReclamation p = new ReponseReclamation(1, Prenom, intitule, textRepRec, idRec);
+    
         ps.save(p);
+        // The rest of your code here
+    }
+
+        
 
 clearTextFields();
     // Clear the TextFields after saving
@@ -100,7 +116,7 @@ clearTextFields();
                 showAlert(Alert.AlertType.ERROR, "Erreur", "Erreur lors de l'ajout de Réclamation", e.getMessage());
                 e.printStackTrace();
             }
-    }
+    }}
     
     private void showAlert(Alert.AlertType alertType, String title, String headerText, String contentText) {
     Alert alert = new Alert(alertType);

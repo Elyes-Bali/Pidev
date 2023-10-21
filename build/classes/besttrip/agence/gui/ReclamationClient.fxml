@@ -10,7 +10,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="744.0" prefWidth="1032.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.agence.gui.ReclamationClientController">
+<AnchorPane id="AnchorPane" prefHeight="744.0" prefWidth="1032.0" style="-fx-background-color: #efd3bc;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.agence.gui.ReclamationClientController">
     <stylesheets>
         <URL value="@reclamationclient.css" />
     </stylesheets>

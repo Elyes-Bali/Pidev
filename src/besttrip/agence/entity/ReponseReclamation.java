@@ -11,26 +11,36 @@ package besttrip.agence.entity;
  */
 public class ReponseReclamation {
     
-     private int idRepRec;
-    private String textRepRec;
-    private String textRec;
+    
     private int idU;
+    private String Prenom;
+    private String intitule;
+    private String textRepRec;
     private int idRec;
+    private int idRepRec;
 
-    public int getIdRepRec() {
-        return idRepRec;
+    public int getIdU() {
+        return idU;
     }
 
-    public String getTextRec() {
-        return textRec;
+    public void setIdU(int idU) {
+        this.idU = idU;
     }
 
-    public void setTextRec(String textRec) {
-        this.textRec = textRec;
+    public String getPrenom() {
+        return Prenom;
     }
 
-    public void setIdRepRec(int idRepRec) {
-        this.idRepRec = idRepRec;
+    public void setPrenom(String Prenom) {
+        this.Prenom = Prenom;
+    }
+
+    public String getIntitule() {
+        return intitule;
+    }
+
+    public void setIntitule(String intitule) {
+        this.intitule = intitule;
     }
 
     public String getTextRepRec() {
@@ -41,14 +51,6 @@ public class ReponseReclamation {
         this.textRepRec = textRepRec;
     }
 
-    public int getIdU() {
-        return idU;
-    }
-
-    public void setIdU(int idU) {
-        this.idU = idU;
-    }
-
     public int getIdRec() {
         return idRec;
     }
@@ -56,6 +58,16 @@ public class ReponseReclamation {
     public void setIdRec(int idRec) {
         this.idRec = idRec;
     }
+
+    public int getIdRepRec() {
+        return idRepRec;
+    }
+
+    public void setIdRepRec(int idRepRec) {
+        this.idRepRec = idRepRec;
+    }
+
+    
 
     public ReponseReclamation() {
     }
@@ -67,13 +79,17 @@ public class ReponseReclamation {
 //        this.idRec = idRec;
 //    }
 
-    public ReponseReclamation(int idRepRec, String textRepRec, String textRec, int idU, int idRec) {
-        this.idRepRec = idRepRec;
-        this.textRepRec = textRepRec;
-        this.textRec = textRec;
+//    
+
+    public ReponseReclamation(int idU, String Prenom, String intitule, String textRepRec, int idRec, int idRepRec) {
         this.idU = idU;
+        this.Prenom = Prenom;
+        this.intitule = intitule;
+        this.textRepRec = textRepRec;
         this.idRec = idRec;
+        this.idRepRec = idRepRec;
     }
+    
     
 
     public ReponseReclamation(String textRepRec, int idU, int idRec) {
@@ -82,16 +98,25 @@ public class ReponseReclamation {
         this.idRec = idRec;
     }
 
-    public ReponseReclamation(String textRepRec, String textRec, int idU, int idRec) {
-        this.textRepRec = textRepRec;
-        this.textRec = textRec;
+//    public ReponseReclamation(String textRepRec, String textRec, int idU, int idRec) {
+//        this.textRepRec = textRepRec;
+//        this.textRec = textRec;
+//        this.idU = idU;
+//        this.idRec = idRec;
+//    }
+
+    public ReponseReclamation(int idU,String Prenom, String intitule, String textRepRec, int idRec) {
         this.idU = idU;
+        this.Prenom = Prenom;
+        this.intitule = intitule;
+        this.textRepRec = textRepRec;
         this.idRec = idRec;
     }
     
     
+    
     @Override
     public String toString() {
-        return "L'id de la réponse de réclamation :"+this.getIdRepRec() +" , l'id de reclameur : "+this.idU+ " , le texte est : "+ this.textRepRec ;
+        return "ID Client :"+ this.getIdU()+"|| Prénom : "+this.getPrenom()+"|| Intitulé Réclamation : "+this.getIntitule()+ "|| Réponse : "+this.getTextRepRec()+"|| Id Réclamation : "+this.getIdRec();
     }
 }

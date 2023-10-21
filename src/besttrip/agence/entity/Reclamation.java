@@ -5,6 +5,12 @@
  */
 package besttrip.agence.entity;
 
+import besttrip.agence.tools.MyDB;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
 /**
  *
  * @author zouar
@@ -95,5 +101,41 @@ public class Reclamation {
     public String toString() {
         return "L'id de réclamation :"+this.idRec +" , l'id de reclameur : "+this.idU+" , l'intitule est : "+this.intitule+ " , le texte est : "+ this.textRec 
                 + ", email est: "+this.emailU;
-    } 
+    }
+    
+    
+    // ... (other attributes and constructors)
+
+    public static Reclamation getReclamationById(int id) {
+        Reclamation reclamation = null;
+
+        try {
+            Connection connection = MyDB.getInstance().getCnx();
+
+            String query = "SELECT * FROM reclamations WHERE idRec = idRec";
+            PreparedStatement statement = connection.prepareStatement(query);
+            statement.setInt(1, id);
+
+            ResultSet resultSet = statement.executeQuery();
+
+            if (resultSet.next()) {
+                reclamation = new Reclamation(
+                    resultSet.getInt("idRec"),
+                    resultSet.getString("intitule"),
+                    resultSet.getString("textRec"),
+                    resultSet.getInt("idU"),
+                    resultSet.getString("emailU")
+                );
+            }
+
+            resultSet.close();
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            // Handle the exception as needed
+        }
+
+        return reclamation;
+    }
+    
 }

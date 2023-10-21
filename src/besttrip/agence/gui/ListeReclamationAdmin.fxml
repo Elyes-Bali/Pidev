@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="button" prefHeight="645.0" prefWidth="924.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.agence.gui.ListeReclamationAdminController">
+<AnchorPane id="AnchorPane" fx:id="button" prefHeight="645.0" prefWidth="924.0" style="-fx-background-color: #efd3bc;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.agence.gui.ListeReclamationAdminController">
     <stylesheets>
         <URL value="@listereclamationadmin.css" />
     </stylesheets>

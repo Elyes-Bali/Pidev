@@ -7,12 +7,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/20.0.1" fx:controller="besttrip.agence.gui.ListeRepRecController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.agence.gui.ListeRepRecController">
     <stylesheets>
         <URL value="@listereprec.css" />
     </stylesheets>
    <children>
-      <AnchorPane id="AnchorPane" fx:id="button" layoutX="10.0" layoutY="10.0" prefHeight="645.0" prefWidth="924.0" styleClass="mainFxmlClass">
+      <AnchorPane id="AnchorPane" fx:id="button" layoutX="10.0" layoutY="10.0" prefHeight="645.0" prefWidth="924.0" style="-fx-background-color: #efd3bc;" styleClass="mainFxmlClass">
          <stylesheets>
             <URL value="@listereclamationadmin.css" />
          </stylesheets>

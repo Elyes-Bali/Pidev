@@ -28,7 +28,8 @@ public class NewFXMain extends Application {
         try {
             root = FXMLLoader.load(getClass().
 //                    getResource("ListeReclamationAdmin.fxml"));
-                    getResource("ReclamationClient.fxml"));
+//                    getResource("ReclamationClient.fxml"));                    
+                      getResource("ListeRepRec.fxml"));
             Scene scene = new Scene(root);
           primaryStage.setTitle("Réclamation");
         primaryStage.setScene(scene);
