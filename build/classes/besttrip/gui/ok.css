@@ -1,0 +1,37 @@
+.empty-heart-icon {
+    -fx-fill: black;
+    -fx-font-size: 24px;
+}
+
+.filled-heart-icon {
+    -fx-fill: red;
+    -fx-font-size: 24px;
+}
+
+.heart-button {
+    -fx-background-color: transparent;
+    -fx-cursor: hand;
+}
+.my-tableview{
+	
+}
+.product-card {
+    -fx-background-color: white;
+    -fx-border-color: black;
+    -fx-padding: 10;
+}
+/* Button CSS style in your stylesheet */
+.reserver-button {
+    -fx-background-color: #0074b7; /* Button background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-font-size: 14px; /* Font size */
+    -fx-padding: 10px 15px; /* Padding */
+    -fx-background-radius: 5; /* Rounded corners */
+}
+
+/* Icon CSS style */
+.reserver-icon {
+    -fx-graphic: url('your-icon.png'); /* Set your icon image file path */
+    -fx-icon-size: 24px; /* Icon size */
+    -fx-icon-spacing: 10px; /* Spacing between icon and text */
+}

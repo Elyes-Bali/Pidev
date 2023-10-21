@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="492.0" prefWidth="631.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="besttrip.gui.AcceuilController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="502.0" fitWidth="631.0" layoutY="-12.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../besttrip2/387524042_1525023491564862_8834950423282838687_n.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="379.0" layoutY="23.0" text="Welcome">
+         <font>
+            <Font size="47.0" />
+         </font>
+      </Label>
+      <Button fx:id="bt1" onAction="#aller"    layoutX="423.0" layoutY="204.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="176.0" text="Admin">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+      <Button  fx:id="bt12" onAction="#retour"  layoutX="252.0" layoutY="204.0" mnemonicParsing="false" text="Participant">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="610.0" prefWidth="755.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.gui.EventInterfaceController">
+   <children>
+      <ImageView fitHeight="630.0" fitWidth="305.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../besttrip2/creer-une-agence-de-voyage.jpg" />
+         </image>
+      </ImageView>
+      <TableView layoutX="305.0" prefHeight="630.0" prefWidth="457.0" fx:id="table">
+        <columns>
+          <TableColumn fx:id="nomcolumn"  prefWidth="75.0" text="Nom " />
+          <TableColumn  fx:id="datecolumn" prefWidth="95.0" text="DateDebut" />
+            <TableColumn fx:id="desccolumn"   prefWidth="118.0" text="Description" />
+            <TableColumn fx:id="catecolumn"  prefWidth="82.0" text="Categorie" />
+            <TableColumn  fx:id="lieucolumn"  prefWidth="86.0" text="Lieu" />
+        </columns>
+      </TableView>
+      <Button layoutX="15.0" layoutY="286.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="246.0" style="-fx-background-color: yellow;" text="Ajouter" onAction="#Ajouter" fx:id="btn1">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="349.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="246.0" fx:id="btn2"  style="-fx-background-color: yellow;" text="Supprimer" onAction="#Supprimer">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="408.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="246.0" style="-fx-background-color: yellow;"  fx:id="btn3" text="Modifier" onAction="#Modifier">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="474.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="246.0" style="-fx-background-color: yellow;" fx:id="btn4" text="Consulter Reservation" onAction="#CosnulterRes">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button layoutX="15.0" layoutY="535.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="246.0" style="-fx-background-color: yellow;" fx:id="btn5"  text="Consulter Participants" onAction="#ConsulterPart">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
