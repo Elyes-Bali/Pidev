@@ -162,6 +162,10 @@ public User (int idU,String Nom, String Prenom, String email, int tel, String md
         return "User{" + "idU=" + idU + ", Nom=" + Nom + ", Prenom=" + Prenom + ", Role=" + Role + ", email=" + email + ", tel=" + tel + ", mdp=" + mdp + ", gender=" + gender + '}';
     }
 
+    public User getCurrentUser() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
 
    

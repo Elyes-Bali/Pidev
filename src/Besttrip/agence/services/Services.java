@@ -165,7 +165,8 @@ pre.setInt(7, u.getIdU());  // This should be the 7th parameter.
         return isExist;
 
     }
+     private void loadInitialDataFromDatabase() {
 
     }
-    
+}
 

@@ -18,6 +18,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
+import util.CurrentUser;
 
 /**
  * FXML Controller class
@@ -25,15 +26,15 @@ import javafx.stage.Stage;
  * @author Maroua SANDI
  */
 public class AcceuilController implements Initializable {
-       private User currentUser;
-
+       
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        
     }    
 
     @FXML
@@ -57,7 +58,7 @@ public class AcceuilController implements Initializable {
     }
 
     void setUserInformation(User user) {
-      currentUser = user;
+      
     }
     
 }

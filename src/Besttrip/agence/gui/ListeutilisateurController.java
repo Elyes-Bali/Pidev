@@ -8,13 +8,17 @@ package Besttrip.agence.gui;
 import Besttrip.agence.entity.User;
 import Besttrip.agence.services.Services;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
@@ -39,14 +43,22 @@ public class ListeutilisateurController implements Initializable {
     private TextField nomD;
     @FXML
     private TextField prenomD;
-
+    @FXML
+    private TextField Txtrecherche;
+      @FXML
+     private FilteredList<User> filteredUsers; 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+         
+        
+        
         loadInitialDataFromDatabase();
         ListeUser.setItems(ListU);
+         filteredUsers = new FilteredList<>(ListU, p -> true); // Initialize a FilteredList with all users.
+         ListeUser.setItems(filteredUsers);
        
         ListeUser.setOnMouseClicked(event ->{
         if (event.getClickCount()==2){
@@ -57,7 +69,10 @@ public class ListeutilisateurController implements Initializable {
               nomD.setText(selectedUser.getNom());
               prenomD.setText(selectedUser.getPrenom());
             }
-        }});}
+            
+        }}) ;
+    Txtrecherche.textProperty().addListener((observable, oldValue, newValue) -> {
+            filterUsers(newValue.toLowerCase());});}
     private void loadInitialDataFromDatabase() {
     Services ps = new Services();
     List<User> initialUser = ps.afficher();
@@ -72,6 +87,7 @@ public class ListeutilisateurController implements Initializable {
 
     @FXML
     private void Supprimer(ActionEvent event) {
+       
         User selectedUser = ListeUser.getSelectionModel().getSelectedItem();
 
     // Check if an item is selected
@@ -99,4 +115,25 @@ public class ListeutilisateurController implements Initializable {
     nomD.clear();
     prenomD.clear();
     
-}}
+}
+    private void filterUsers(String searchQuery) {
+        filteredUsers.setPredicate(user -> {
+            if (searchQuery == null || searchQuery.isEmpty()) {
+                return true;
+            }
+
+            String lowerCaseFilter = searchQuery.toLowerCase();
+            return user.getNom().toLowerCase().contains(lowerCaseFilter)
+                    || user.getPrenom().toLowerCase().contains(lowerCaseFilter)
+                    || user.getEmail().toLowerCase().contains(lowerCaseFilter);
+        });
+    }
+    
+    
+    
+    
+}
+ 
+    
+
+

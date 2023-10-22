@@ -23,6 +23,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Hyperlink;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import util.CurrentUser;
 
 /**
  * FXML Controller class
@@ -30,6 +31,7 @@ import javafx.stage.Stage;
  * @author Maroua SANDI
  */
 public class LoginController implements Initializable {
+    private Services pcd ;
 
     @FXML
     private TextField emailLogin;
@@ -43,7 +45,10 @@ public class LoginController implements Initializable {
     private Hyperlink Insecrirnew;
     
  
-
+public LoginController() {
+        // Initialize the Services instance in the constructor
+        pcd = new Services();
+    }
     /**
      * Initializes the controller class.
      */
@@ -67,6 +72,7 @@ public class LoginController implements Initializable {
             try {
                 if (pcd.login(emailText, pwdText)) {
                     User user = pcd.getLogedUser(emailText);
+                    CurrentUser.setCurrentUser(user);
                     if (user.getEmail().equalsIgnoreCase("sandi.maroua@yahoo.com")) {
                         FXMLLoader loader = new FXMLLoader(getClass().getResource("listeutilisateur.fxml"));
                         Parent root = loader.load();
