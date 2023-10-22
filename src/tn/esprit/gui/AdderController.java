@@ -117,7 +117,7 @@ public class AdderController implements Initializable {
          idDelete.setGraphic(imageView1);
           ImageView imageView2 = new ImageView(getClass().getResource("/images/edite.png").toExternalForm());
          idEdite.setGraphic(imageView2);
-          ImageView imageView3 = new ImageView(getClass().getResource("/images/add.png").toExternalForm());
+          ImageView imageView3 = new ImageView(getClass().getResource("/images/save2.png").toExternalForm());
          idAjoute.setGraphic(imageView3);
         // TODO
     }    

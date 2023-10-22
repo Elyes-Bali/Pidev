@@ -14,7 +14,7 @@
 <AnchorPane id="AnchorPane" prefHeight="627.0" prefWidth="998.0" style="-fx-background-color: #efd3bc;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.gui.AdderController">
     <children>
     
-      <Button fx:id="idEdite" layoutX="885.0" layoutY="535.0" mnemonicParsing="false" onAction="#saveEditedCircuit" prefHeight="26.0" prefWidth="67.0" style="-fx-background-radius: 10px; -fx-background-color: transparent;" />
+      <Button fx:id="idEdite" layoutX="885.0" layoutY="534.0" mnemonicParsing="false" onAction="#saveEditedCircuit" prefHeight="26.0" prefWidth="67.0" style="-fx-background-radius: 10px; -fx-background-color: transparent;" />
       <Label layoutX="236.0" layoutY="346.0" text="Point de depart:" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="14.0" />
@@ -51,13 +51,13 @@
          <opaqueInsets>
             <Insets />
          </opaqueInsets></TextField>
-      <Label layoutX="584.0" layoutY="346.0" text="Categorie:" textAlignment="CENTER">
+      <Label layoutX="584.0" layoutY="346.0" text="ISO:" textAlignment="CENTER">
          <font>
             <Font name="System Bold Italic" size="14.0" />
          </font>
       </Label>
-      <Button fx:id="idAjoute" layoutX="775.0" layoutY="535.0" mnemonicParsing="false" onAction="#addCircuit" prefHeight="26.0" prefWidth="67.0" style="-fx-background-radius: 10px; -fx-background-color: transparent;" />
-      <TextField fx:id="category" layoutX="584.0" layoutY="383.0" promptText="categorie">
+      <Button fx:id="idAjoute" layoutX="775.0" layoutY="535.0" minWidth="-Infinity" mnemonicParsing="false" onAction="#addCircuit" prefHeight="20.0" prefWidth="50.0" style="-fx-background-radius: 10px; -fx-background-color: transparent;" />
+      <TextField fx:id="category" layoutX="584.0" layoutY="383.0" promptText="International Organization for Standardization">
          <opaqueInsets>
             <Insets />
          </opaqueInsets></TextField>
@@ -80,7 +80,7 @@
           <TableColumn fx:id="arriveColumn" prefWidth="105.0" text="Arrive" />
             <TableColumn fx:id="prixColumn" prefWidth="105.0" text="Prix" />
             <TableColumn fx:id="tempsColumn" prefWidth="105.0" text="Temps" />
-            <TableColumn fx:id="categorieColumn" prefWidth="105.0" text="Catégorie" />
+            <TableColumn fx:id="categorieColumn" prefWidth="105.0" text="ISO" />
             <TableColumn fx:id="descriptionColumn" prefWidth="186.0" text="Description" />
         </columns>
       </TableView>
