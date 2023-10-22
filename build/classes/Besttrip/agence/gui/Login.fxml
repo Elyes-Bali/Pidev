@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import java.net.URL?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
@@ -23,7 +24,7 @@
          <image>
             <Image url="@../../../images/umbrella.jpg" />
          </image></ImageView>
-      <Label layoutX="397.0" layoutY="86.0" prefHeight="26.0" prefWidth="194.0" text="Authentification">
+      <Label layoutX="397.0" layoutY="117.0" prefHeight="26.0" prefWidth="194.0" text="Authentification">
          <font>
             <Font name="Arial Bold" size="21.0" />
          </font>
@@ -54,5 +55,6 @@
             <Font size="14.0" />
          </font>
       </Hyperlink>
+      <FontAwesomeIcon glyphName="USERS" layoutX="418.0" layoutY="96.0" size="8em" wrappingWidth="85.60006713867188" />
    </children>
 </AnchorPane>

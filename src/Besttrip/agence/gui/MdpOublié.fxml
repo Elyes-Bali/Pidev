@@ -24,7 +24,7 @@
          </font>
       </Text>
       <TextField fx:id="oublieEmail" layoutX="67.0" layoutY="275.0" prefHeight="27.0" prefWidth="537.0" promptText="E-mail" />
-      <Button fx:id="Demande" layoutX="69.0" layoutY="356.0" mnemonicParsing="false" onAction="#demandeMdp" prefHeight="34.0" prefWidth="538.0" style="-fx-background-color: orange;" text="DEMANDER UN MOT DE PASSE" textFill="#ece9e9">
+      <Button fx:id="Demande" layoutX="69.0" layoutY="356.0" mnemonicParsing="false" onAction="#verifyAndSendResetEmail" prefHeight="34.0" prefWidth="538.0" style="-fx-background-color: orange;" text="DEMANDER UN MOT DE PASSE" textFill="#ece9e9">
          <font>
             <Font name="Arial Black" size="13.0" />
          </font>
