@@ -114,10 +114,12 @@ private void showNoEventsAlert() {
             // Appelez la méthode pour ajouter la réservation
             sc.ajouterReservation(reservation, participantId);
             
+       
+            showAlert(AlertType.CONFIRMATION, "Succès", "Réservation effectuée avec succès !", "Numéro de téléphone : " + phoneNumber + "\nNombre de places réservées : " + numberOfSeats);
         
-            showAlert(AlertType.INFORMATION, "Succès", "Réservation effectuée avec succès !", "Numéro de téléphone : " + phoneNumber + "\nNombre de places réservées : " + numberOfSeats);
+            //nbadel blyes l9a3det with bd update 
         
-            //nbadel blyes l9a3det with bd update
+
             int numberOfSeatsReserved = reservation.getPlacesReservees();
             int numberOfSeatsAvailable = event1.getPlacesDisponibles();
             int newNumberOfSeatsAvailable = numberOfSeatsAvailable - numberOfSeatsReserved;
@@ -131,9 +133,6 @@ private void showNoEventsAlert() {
         }
     });
 });
-
-
-
         HBox buttonBox = new HBox(reserveButton);
         buttonBox.setAlignment(Pos.CENTER_RIGHT);
         VBox.setMargin(buttonBox, new Insets(0, 10, 0, 0));

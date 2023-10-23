@@ -35,7 +35,10 @@ import java.util.Date;
 import java.time.ZoneId;
 import java.time.Instant;
 import java.util.Optional;
+import javafx.geometry.Pos;
 import javafx.scene.control.ButtonType;
+import javafx.util.Duration;
+import org.controlsfx.control.Notifications;
 
  
 public class AjouterEventsController implements Initializable {
@@ -101,6 +104,8 @@ public enum Type {
         t4.setItems(FXCollections.observableArrayList(Type.values()));
 
     } 
+    
+    
      @FXML
 void Ajouter(ActionEvent event) {
     int id_categorie = -1; // Default value in case nothing is selected
@@ -153,6 +158,40 @@ void Ajouter(ActionEvent event) {
          try{
          ServiceEvent bs =new ServiceEvent();
          bs.ajouter(event1);
+         
+         
+          
+         
+          javafx.scene.image.Image img = new javafx.scene.image.Image(getClass().getResourceAsStream("/b.png"));
+
+    // Définir les dimensions de l'image réduite
+    double newWidth = 100; // Remplacez 100 par la largeur souhaitée en pixels
+    double newHeight = 100; // Remplacez 100 par la hauteur souhaitée en pixels
+
+    // Créer un ImageView avec les dimensions réduites
+    ImageView imageView = new ImageView(img);
+    imageView.setFitWidth(newWidth);
+    imageView.setFitHeight(newHeight);
+
+    // Créer la notification avec l'image réduite
+    Notifications notificationBuilder = Notifications.create()
+            .title("Succès!")
+            .text("Un nouvel événement est bien ajouté dans la base de données")
+            .graphic(imageView)  
+            .hideAfter(Duration.seconds(10))
+            .position(Pos.BOTTOM_RIGHT);
+    notificationBuilder.darkStyle();
+    notificationBuilder.show();
+         
+         
+      /*   Notifications.create().title("Success").text("L'événement est ajouté avec succes").showInformation();  //notification*/
+         
+         
+         
+         
+         
+         
+         
          Alert alert2 = new Alert(AlertType.CONFIRMATION);
 			alert2.setTitle("Information Dialog");
 			alert2.setHeaderText(null);
@@ -193,6 +232,7 @@ void Ajouter(ActionEvent event) {
         alert.showAndWait();
     }
     }
+    
     // Réinitialisez les champs après l'ajout
     t1.clear();
     t2.setValue(null);
