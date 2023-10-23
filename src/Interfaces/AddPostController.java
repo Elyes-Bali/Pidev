@@ -134,7 +134,7 @@ private void add_post(ActionEvent event) throws IOException {
                 alert.showAndWait();
                 
                 
-                  String recipient = "mahmoud.lakhal@esprit.tn";
+                  String recipient = "amdouni.abdennour@esprit.tn";
                  try {
                  DB.Mail.envoyer(recipient);
                  System.out.println("Le message a été envoyé avec succès.");

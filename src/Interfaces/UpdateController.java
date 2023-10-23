@@ -106,7 +106,7 @@ public class UpdateController implements Initializable {
         Alert alert = new Alert(Alert.AlertType.ERROR);
         alert.setTitle("Erreur");
         alert.setHeaderText(null);
-        alert.setContentText("Le champ prix doit étre un nombre !");
+        alert.setContentText("!!!!!!v!!!!!");
         alert.showAndWait();
         return;
        }

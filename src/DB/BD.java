@@ -18,7 +18,7 @@ public class BD {
     private static BD instance;
     private Connection cnx;
 
-    private final String URL = "jdbc:mysql://localhost:3306/blog";
+    private final String URL = "jdbc:mysql://localhost:3306/besttrip";
     private final String LOGIN = "root";
     private final String PASSWORD = "";
 

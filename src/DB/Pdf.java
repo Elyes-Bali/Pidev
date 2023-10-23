@@ -38,9 +38,9 @@ public class Pdf {
         {
             
         document.add(new Paragraph("Le Titre :"+u.getTitre()));
-        document.add(new Paragraph("Le sujet de cette tableau artestique est :"+u.getSujet()));
+        document.add(new Paragraph("Le sujet est :"+u.getSujet()));
         document.add(new Paragraph("image :"+u.getImage()));
-        document.add(new Paragraph("cette tableau est avendre depuis :"+u.getDate()));
+        document.add(new Paragraph("cette tableau est depuis :"+u.getDate()));
         
         document.add(new Paragraph("---------------------------------------------------------------------------------------------------------------------------------- "));
         }
