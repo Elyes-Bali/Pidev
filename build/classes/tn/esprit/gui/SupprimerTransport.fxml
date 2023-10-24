@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.gui.SupprimerTransportController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" styleClass="gradient" stylesheets="@transport.css">
+         <children>
+            <TextField fx:id="idt" layoutX="30.0" layoutY="46.0" promptText="Rechercher" styleClass="textfield" stylesheets="@transport.css" />
+            <Button fx:id="supprimert" layoutX="463.0" layoutY="337.0" mnemonicParsing="false" onAction="#supprimerTransport" prefHeight="39.0" prefWidth="108.0" styleClass="type-btn" stylesheets="@transport.css" text="Supprimer" />
+            <Button fx:id="retourt" layoutX="60.0" layoutY="337.0" mnemonicParsing="false" onAction="#retournerALaPagePrincipale" styleClass="type-btn" stylesheets="@transport.css" text="Retour" />
+            <TableView fx:id="tablesupp" layoutX="30.0" layoutY="100.0" prefHeight="200.0" prefWidth="403.0">
+              <columns>
+                <TableColumn fx:id="capsup" prefWidth="68.33334350585938" text="Capacité" />
+                <TableColumn fx:id="typesup" prefWidth="63.666656494140625" text="Type" />
+                  <TableColumn fx:id="ddsup" prefWidth="104.33331298828125" text="Date de départ" />
+                  <TableColumn fx:id="dasup" prefWidth="111.0" text="Date d'arrivée" />
+                  <TableColumn fx:id="prixsup" prefWidth="53.0" text="Prix" />
+              </columns>
+            </TableView>
+            <Button fx:id="oksup" layoutX="260.0" layoutY="40.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="60.0" styleClass="type-btn" stylesheets="@transport.css" text="OK" />
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

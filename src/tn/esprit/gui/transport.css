@@ -1,0 +1,52 @@
+   /*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.gradient{
+    -fx-background-color: linear-gradient(to bottom right, #11c2d9, #e4eaeb);
+}
+.type-btn{
+        -fx-background-color: linear-gradient(to bottom right, #1a1ad9 , #d91a4d);
+        -fx-background-radius: 5px;
+        -fx-text-fill: #f8f8f8;
+        -fx-font-size: 18;
+        -fx-cursor: hand;
+ }
+ .type-btn:hover{
+             -fx-background-color: linear-gradient(to bottom left, #1ad933 , #a818a8);
+ }
+ .textfield{
+     -fx-background-color: #faffce ;
+     -fx-border-color: red;
+     -fx-border-width: 1px;
+ }
+ .box{
+      -fx-border-color: black;
+     -fx-border-width: 2px;
+ }
+ .search{
+        -fx-background-color: linear-gradient(to bottom right, #1a1ad9 , #d91a4d);
+        -fx-background-radius: 5px;
+        -fx-text-fill: #f8f8f8;
+        -fx-font-size: 14;
+        -fx-cursor: hand;
+ }
+  .search:hover{
+        -fx-background-color: linear-gradient(to bottom left, #1ad933 , #a818a8);
+  }
+  .form{
+       -fx-background-color: #979d9b;
+  }
+  .find{
+          -fx-background-color: linear-gradient(to bottom right, #11c2d9, #e4eaeb);
+          -fx-background-radius: 5px;
+          -fx-text-fill: #a818a8;
+          -fx-font-size: 18;
+          -fx-cursor: hand;
+  }
+    .find:hover{
+             -fx-background-color: linear-gradient(to bottom left, #1ad933 , #a818a8);
+    }

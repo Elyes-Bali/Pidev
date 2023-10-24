@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxtransport.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane fx:id="sa_form" layoutX="300.0" prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@../tn/esprit/gui/transport.css">
+               <children>
+                  <Label fx:id="sa_g" layoutX="33.0" layoutY="37.0" text="Gestion de Transport" textFill="#a11ad9">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="sa_add" layoutX="40.0" layoutY="104.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="220.0" styleClass="type-btn" stylesheets="@../tn/esprit/gui/transport.css" text="Ajouter" textFill="#f8f8f8f5">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="sa_update" layoutX="40.0" layoutY="163.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="type-btn" stylesheets="@../tn/esprit/gui/transport.css" text="Modifier" textFill="#f8f8f8" wrapText="true">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="sa_delete" layoutX="40.0" layoutY="223.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="type-btn" stylesheets="@../tn/esprit/gui/transport.css" text="Supprimer" textFill="#f8f8f8">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="sa_search" layoutX="40.0" layoutY="278.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="220.0" styleClass="type-btn" stylesheets="@../tn/esprit/gui/transport.css" text="Chercher" />
+                  <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="50.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/image/add-icon-png-4.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="36.0" fitWidth="36.0" layoutX="47.0" layoutY="165.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/image/update-icon-png-25.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/image/delete-icon-png-6.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../../../Downloads/image/search-icon-png-5.jpg" />
+                     </image>
+                  </ImageView>
+                  <Hyperlink fx:id="sa_ret" layoutX="213.0" layoutY="345.0" text="Retour">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Hyperlink>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@../tn/esprit/gui/transport.css">
+               <children>
+                  <Button fx:id="sz_bu" layoutX="110.0" layoutY="70.0" mnemonicParsing="false" text="Button" />
+                  <Button fx:id="sz_but" layoutX="70.0" layoutY="152.0" mnemonicParsing="false" text="Button" />
+                  <Label fx:id="sz_label" layoutX="108.0" layoutY="35.0" text="Label" />
+               </children></AnchorPane>
+            <AnchorPane fx:id="se_form" disable="true" prefHeight="400.0" prefWidth="300.0" styleClass="gradient" stylesheets="@../tn/esprit/gui/transport.css" visible="false">
+               <children>
+                  <Label fx:id="se_aj" layoutX="30.0" layoutY="34.0" text="Ajout de Transport" textFill="#a818a8">
+                     <font>
+                        <Font name="System Bold Italic" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="se_valider" layoutX="104.0" layoutY="314.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="80.0" styleClass="type-btn" stylesheets="@../tn/esprit/gui/transport.css" text="valider" />
+                  <TextField fx:id="se_capa" layoutX="120.0" layoutY="97.0" prefHeight="28.0" prefWidth="149.0" promptText="capacité du moyen" styleClass="textfield" stylesheets="@../tn/esprit/gui/transport.css" text="Capacité du moyen" />
+                  <ComboBox fx:id="se_typ" layoutX="120.0" layoutY="144.0" prefWidth="150.0" promptText="Type du moyen" styleClass="box" stylesheets="@../tn/esprit/gui/transport.css" />
+                  <Label fx:id="se_capaci" layoutX="26.0" layoutY="102.0" prefHeight="17.0" prefWidth="61.0" text="Capacité :" />
+                  <Label fx:id="se_ty" layoutX="25.0" layoutY="150.0" text="Type :" />
+                  <TextField fx:id="se_dde" layoutX="120.0" layoutY="200.0" prefHeight="28.0" prefWidth="149.0" promptText="Date de départ" styleClass="textfield" stylesheets="@../tn/esprit/gui/transport.css" text="Date de départ" />
+                  <Label fx:id="se_dad" layoutX="17.0" layoutY="205.0" text="Date de départ :" />
+                  <Label fx:id="se_dar" layoutX="17.0" layoutY="254.0" text="Date d'arrivée :" />
+                  <TextField fx:id="se_dda" layoutX="120.0" layoutY="249.0" prefHeight="28.0" prefWidth="149.0" promptText="Date de départ" styleClass="textfield" stylesheets="@../tn/esprit/gui/transport.css" text="Date d'arrivée" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
