@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.DashboardController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" stylesheets="@dashboardDesign.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.DashboardController">
    <children>
       <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -18,14 +18,14 @@
                <left>
                   <AnchorPane prefHeight="657.0" prefWidth="266.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane layoutY="-22.0" prefHeight="560.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane prefHeight="560.0" prefWidth="200.0" styleClass="navbar2" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ImageView fitHeight="148.0" fitWidth="130.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="300.0" fitWidth="2000.0" layoutX="42.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../../../images/logo.png" />
                                  </image>
                               </ImageView>
-                              <Button fx:id="btnHome" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="265.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Home" textFill="WHITE">
+                              <Button fx:id="btnHome" layoutX="67.0" layoutY="261.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="230.0" styleClass="navbutton" stylesheets="@dashboardDesign.css" text="Home" textFill="WHITE">
                                  <graphic>
                                     <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -40,7 +40,7 @@
                                     <Insets left="65.0" />
                                  </padding>
                               </Button>
-                              <Button fx:id="btnHeb" layoutY="270.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="265.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Hébergements" textFill="WHITE">
+                              <Button fx:id="btnHeb" layoutX="65.0" layoutY="340.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="233.0" styleClass="navbutton" stylesheets="@dashboardDesign.css" text="Hébergements" textFill="WHITE">
                                  <graphic>
                                     <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -55,7 +55,7 @@
                                     <Insets left="65.0" />
                                  </padding>
                               </Button>
-                              <Button fx:id="btnCateg" layoutY="310.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="265.0" styleClass="nav-btn" text="Catégorie" textFill="WHITE">
+                              <Button fx:id="btnCateg" layoutX="65.0" layoutY="420.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="40.0" prefWidth="232.0" styleClass="navbutton" text="Catégorie" textFill="WHITE">
                                  <graphic>
                                     <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -78,13 +78,14 @@
                <center>
                   <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="757.0" prefWidth="1233.0" BorderPane.alignment="CENTER">
                      <children>
-                        <AnchorPane fx:id="viewPages" layoutX="224.0" layoutY="134.0" prefHeight="760.0" prefWidth="1234.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <AnchorPane fx:id="viewPages" layoutY="14.0" prefHeight="760.0" prefWidth="1234.0" AnchorPane.bottomAnchor="-16.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
                            <children>
                               <Text layoutX="316.0" layoutY="352.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à Best Trip" textAlignment="CENTER" wrappingWidth="635.7366008758545">
                                  <font>
                                     <Font name="Andalus" size="66.0" />
                                  </font>
                               </Text>
+                              <AnchorPane layoutX="-3.0" layoutY="-37.0" prefHeight="176.0" prefWidth="1237.0" styleClass="navbar2" />
                            </children></AnchorPane>
                      </children>
                   </AnchorPane>

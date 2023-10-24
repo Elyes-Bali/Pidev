@@ -21,15 +21,15 @@
       <TextField fx:id="textAdresse" layoutX="273.0" layoutY="308.0" prefHeight="26.0" prefWidth="216.0" promptText="Adresse" styleClass="textfield" stylesheets="@dashboardDesign.css" />
       <Label layoutX="170.0" layoutY="428.0" prefHeight="18.0" prefWidth="86.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Description :" />
       <TextArea fx:id="textDescription" layoutX="271.0" layoutY="428.0" prefHeight="60.0" prefWidth="216.0" promptText="Description" styleClass="textarea" stylesheets="@dashboardDesign.css" />
-      <Button fx:id="btnAddCateg" layoutX="420.0" layoutY="550.0" mnemonicParsing="false" onAction="#AjoutHebergement" prefHeight="34.0" prefWidth="66.0" styleClass="btn" stylesheets="@dashboardDesign.css" text="Add" />
-      <Button fx:id="btnClearCateg" layoutX="328.0" layoutY="551.0" mnemonicParsing="false" onAction="#clearFieldsHebergement" prefHeight="34.0" prefWidth="77.0" styleClass="btn" stylesheets="@dashboardDesign.css" text="Clear" />
+      <Button fx:id="btnAddCateg" layoutX="420.0" layoutY="550.0" mnemonicParsing="false" onAction="#AjoutHebergement" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: violet;" styleClass="btn" stylesheets="@dashboardDesign.css" text="Add" />
+      <Button fx:id="btnClearCateg" layoutX="328.0" layoutY="551.0" mnemonicParsing="false" onAction="#clearFieldsHebergement" prefHeight="34.0" prefWidth="77.0" style="-fx-background-color: violet;" styleClass="btn" stylesheets="@dashboardDesign.css" text="Clear" />
       <Label layoutX="171.0" layoutY="391.0" prefHeight="18.0" prefWidth="86.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Type :" />
-      <Label layoutX="191.0" layoutY="102.0" prefHeight="52.0" prefWidth="283.0" text="Ajouter une Hébergement" textFill="#ffb900">
+      <Label layoutX="191.0" layoutY="102.0" prefHeight="52.0" prefWidth="283.0" text="Ajouter une Hébergement" textFill="#c900ff">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
       </Label>
-      <Button fx:id="btnReturnAct" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#return_ListHebergement" prefHeight="34.0" prefWidth="66.0" styleClass="btn" stylesheets="@dashboardDesign.css">
+      <Button fx:id="btnReturnAct" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#return_ListHebergement" prefHeight="34.0" prefWidth="66.0" style="-fx-background-color: violet;" styleClass="btn" stylesheets="@dashboardDesign.css">
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                <image>

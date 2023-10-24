@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="addHebPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.AjoutHebergementController">
+<AnchorPane fx:id="addHebPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.AjoutHebergementController">
    <children>
       <Label layoutX="171.0" layoutY="229.0" prefHeight="17.0" prefWidth="57.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Capacité :" />
       <Label layoutX="171.0" layoutY="271.0" prefHeight="17.0" prefWidth="57.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Prix :" />
@@ -33,14 +33,14 @@
          <graphic>
             <ImageView fitHeight="25.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../images/return.png" />
+                  <Image url="@../../../images/return.png" />
                </image>
             </ImageView>
          </graphic></Button>
       <ComboBox fx:id="textCateg" layoutX="273.0" layoutY="348.0" prefHeight="26.0" prefWidth="216.0" promptText="Catégorie" styleClass="comboBox" stylesheets="@dashboardDesign.css" />
       <ImageView fitHeight="424.0" fitWidth="425.0" layoutX="680.0" layoutY="211.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../images/5783695.png" />
+            <Image url="@../../../images/5783695.png" />
          </image>
       </ImageView>
       <TextField fx:id="textType" layoutX="272.0" layoutY="387.0" prefHeight="26.0" prefWidth="216.0" promptText="Type" styleClass="textfield" stylesheets="@dashboardDesign.css" />
