@@ -53,13 +53,13 @@
             <String fx:value="textfield-record-design" />
             <String fx:value="textheader-design" />
          </styleClass></TextField>
-      <Button layoutX="424.0" layoutY="390.0" mnemonicParsing="false" onAction="#SEconncter" prefHeight="35.0" prefWidth="206.0" styleClass="navbutton" text="               SE CONNECTER" textAlignment="CENTER" textFill="#feffff">
+      <Button layoutX="429.0" layoutY="390.0" mnemonicParsing="false" onAction="#SEconncter" prefHeight="35.0" prefWidth="206.0" styleClass="navbutton" text="               SE CONNECTER" textAlignment="CENTER" textFill="#feffff">
          <font>
             <Font name="Arial Bold" size="12.0" />
          </font></Button>
       <CheckBox fx:id="shownmdp" layoutX="430.0" layoutY="314.0" mnemonicParsing="false" onAction="#shownpass" text="afficher mot de passe" />
       <Hyperlink fx:id="mdpoublie" layoutX="429.0" layoutY="350.0" onAction="#HLmdp" prefHeight="24.0" prefWidth="206.0" text="Mot de passe oublié  ?" />
-      <Hyperlink fx:id="Insecrirnew" layoutX="478.0" layoutY="462.0" onAction="#changeFormInsercir" prefHeight="24.0" prefWidth="151.0" stylesheets="@login.css" text="S'inscrire">
+      <Hyperlink fx:id="Insecrirnew" layoutX="490.0" layoutY="462.0" onAction="#changeFormInsercir" prefHeight="24.0" prefWidth="151.0" stylesheets="@login.css" text="S'inscrire">
          <font>
             <Font size="14.0" />
          </font>

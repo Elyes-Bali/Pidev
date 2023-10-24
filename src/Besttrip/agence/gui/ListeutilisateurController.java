@@ -48,8 +48,6 @@ public class ListeutilisateurController implements Initializable {
     private TextField Txtrecherche;
      private FilteredList<User> filteredUsers; 
     @FXML
-    private Button home;
-    @FXML
     private Button forum;
     @FXML
     private Button ListRec;
@@ -137,27 +135,31 @@ public class ListeutilisateurController implements Initializable {
     }
 
     @FXML
-    private void transport(ActionEvent event) {
+    private void ListeEvent(ActionEvent event) {
     }
 
     @FXML
-    private void circuit(ActionEvent event) {
+    private void ListeTransp(ActionEvent event) {
     }
 
     @FXML
-    private void hebergement(ActionEvent event) {
+    private void ListeCircuit(ActionEvent event) {
     }
 
     @FXML
-    private void reclamation(ActionEvent event) {
+    private void ListeHeberg(ActionEvent event) {
     }
 
     @FXML
-    private void forum(ActionEvent event) {
+    private void ListeRec(ActionEvent event) {
     }
 
     @FXML
-    private void listRec(ActionEvent event) {
+    private void ListeForum(ActionEvent event) {
+    }
+
+    @FXML
+    private void LogoutListeUtilisateur(ActionEvent event) {
     }
     
     

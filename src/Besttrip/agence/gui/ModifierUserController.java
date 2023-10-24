@@ -41,8 +41,6 @@ public class ModifierUserController implements Initializable {
     private TextField mdpM;
     @FXML
     private TextField telM;
-    @FXML
-    private ImageView image;
 
     /**
      * Initializes the controller class.

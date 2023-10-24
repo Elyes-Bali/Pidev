@@ -27,7 +27,7 @@
          </font>
       </Text>
       <TextField fx:id="oublieEmail" layoutX="67.0" layoutY="275.0" prefHeight="27.0" prefWidth="537.0" promptText="E-mail" styleClass="label-record-design" />
-      <Button fx:id="Demande" layoutX="69.0" layoutY="356.0" mnemonicParsing="false" onAction="#verifyAndSendResetEmail" prefHeight="34.0" prefWidth="538.0" style="-fx-background-color: orange;" text="DEMANDER UN MOT DE PASSE" textFill="#ece9e9">
+      <Button fx:id="Demande" layoutX="69.0" layoutY="350.0" mnemonicParsing="false" onAction="#verifyAndSendResetEmail" prefHeight="40.0" prefWidth="538.0" style="-fx-background-color: orange;" text="DEMANDER UN MOT DE PASSE" textFill="#ece9e9">
          <font>
             <Font name="Arial Black" size="13.0" />
          </font>
@@ -39,6 +39,6 @@
          </styleClass>
       </Button>
       <Button layoutX="34.0" layoutY="48.0" mnemonicParsing="false" onAction="#retourOUBlie" prefHeight="26.0" prefWidth="70.0" style="-fx-background-color: white;" styleClass="clear-button" text="Retour" textFill="#2889e4" />
-      <FontAwesomeIcon fill="#2192d4" glyphName="REPLY" layoutX="57.0" layoutY="72.0" size="2em" />
+      <FontAwesomeIcon fill="#2192d4" glyphName="UNDO" layoutX="57.0" layoutY="72.0" size="2em" />
    </children>
 </AnchorPane>

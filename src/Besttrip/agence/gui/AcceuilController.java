@@ -31,8 +31,6 @@ public class AcceuilController implements Initializable {
     private Button event;
 
     @FXML
-    private Button home;
-    @FXML
     private Button forum;
     @FXML
     private Button deconn;
@@ -47,7 +45,6 @@ public class AcceuilController implements Initializable {
         
     }    
 
-    @FXML
     private void MonProfil(ActionEvent event) {
          try{FXMLLoader loader =new FXMLLoader(getClass().getResource("/Besttrip/agence/gui/ModifierUser.fxml"));
         Parent root =loader.load();
@@ -67,33 +64,32 @@ public class AcceuilController implements Initializable {
     void setUserInformation(User user) {
       
     }
-
-    @FXML
-    private void event(ActionEvent event) {
-    }
-
-    @FXML
-    private void transport(ActionEvent event) {
-    }
-
-    @FXML
-    private void circuit(ActionEvent event) {
-    }
-
-    @FXML
-    private void hebergement(ActionEvent event) {
-    }
-
-    @FXML
-    private void reclamation(ActionEvent event) {
-    }
-
-    @FXML
-    private void forum(ActionEvent event) {
-    }
-
     @FXML
     private void deconnecter(ActionEvent event) {
+    }
+
+    @FXML
+    private void EventAcceuil(ActionEvent event) {
+    }
+
+    @FXML
+    private void TransportAcceuil(ActionEvent event) {
+    }
+
+    @FXML
+    private void CircuitAcceuil(ActionEvent event) {
+    }
+
+    @FXML
+    private void HebergementAcceuil(ActionEvent event) {
+    }
+
+    @FXML
+    private void ReclamationAcceuil(ActionEvent event) {
+    }
+
+    @FXML
+    private void ForumAcceuil(ActionEvent event) {
     }
     
 }
