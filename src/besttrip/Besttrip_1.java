@@ -5,10 +5,10 @@
  */
 package besttrip;
 
-import Entity.Commentaire;
-import Entity.Post;
-import Service.CommentaireService;
-import Service.PostService;
+import Besttrip.agence.entity.Commentaire;
+import Besttrip.agence.entity.Post;
+import Besttrip.agance.services.CommentaireService;
+import Besttrip.agance.services.PostService;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import javax.print.attribute.standard.DateTimeAtCompleted;
