@@ -29,6 +29,7 @@ import javafx.scene.layout.AnchorPane;
 import Besttrip.agence.services.CategoryService;
 import Besttrip.agence.services.HebergementService;
 import com.twilio.Twilio;
+import static com.twilio.example.Example.ACCOUNT_SID;
 import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 
@@ -163,30 +164,30 @@ public class AjoutHebergementController implements Initializable {
     
     
     
-    //void send_SMS(){
-        // Initialisation de la bibliothèque Twilio avec les informations de votre compte
-        //String ACCOUNT_SID = "ACc382f9f003776eed47d67e592c17d616";
-       // String AUTH_TOKEN = "847aa6f0a93959a3de562a1fa8b176bb";
+    void send_SMS(){
+        // Initialisation de la bibliothèque Twilio avec les informations de votre compte ;
+        String ACCOUNT_SID = "ACc382f9f003776eed47d67e592c17d616";
+        String AUTH_TOKEN = "847aa6f0a93959a3de562a1fa8b176bb";
              
-        //Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
+        Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 
-        //    String recipientNumber = "+21622711171";
-        //    String message = "Bonjour Mr ,\n"
-        //            + "Nous sommes ravis de vous informer qu'une hébergement a été ajouté.\n "
-        //            + "Veuillez contactez l'administration pour plus de details.\n "
-        //            + "Merci de votre fidélité et à bientôt chez BestTrip.\n"
-        //            + "Cordialement,\n"
-         //           + "BestTrip 2023";
+            String recipientNumber = "+21622711171";
+            String message = "Bonjour Mr ,\n"
+                    + "Nous sommes ravis de vous informer qu'une hébergement a été ajouté.\n "
+                    + "Veuillez contactez l'administration pour plus de details.\n "
+                    + "Merci de votre fidélité et à bientôt chez BestTrip.\n"
+                    + "Cordialement,\n"
+                    + "BestTrip 2023";
                 
-         //   Message twilioMessage = Message.creator(
-         //       new PhoneNumber(recipientNumber),
-         //       new PhoneNumber("+12293745487"),message).create();
+            Message twilioMessage = Message.creator(
+                new PhoneNumber(recipientNumber),
+                new PhoneNumber("+12293745487"),message).create();
                 
-         //   System.out.println("SMS envoyé : " + twilioMessage.getSid());
+            System.out.println("SMS envoyé : " + twilioMessage.getSid());
 
         
          
-     //}
+     }
     
     
    
