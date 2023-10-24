@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/ListCategController.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/entities/Reservation.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/StatistiquesController.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/entities/CategoryHebergement.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/ListHebergementFrontController.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/entities/CrudCategHeb.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/AjoutCategoryController.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/services/CategoryService.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/AjoutHebergementController.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/ListHebergementController.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/services/ReservationService.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/utils/MyDB.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/ListHebFrontCardController.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/MyListener.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/dashboardDesign.css</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/listhebergementfront.css</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/entities/Hebergement.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/DashboardController.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/gui/GestionHeb.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/entities/CrudHebergement.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/services/HebergementService.java</file>
+            <file>file:/C:/Users/Ons/Desktop/GestionHeb/src/entities/CrudReservation.java</file>
+        </group>
+    </open-files>
+</project-private>
