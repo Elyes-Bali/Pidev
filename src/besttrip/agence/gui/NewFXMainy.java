@@ -23,7 +23,7 @@ public class NewFXMainy extends Application {
            Parent root;
         try {
 root = FXMLLoader.load(getClass().
-//             getResource("ListeRepRec.fxml"));
+//                     getResource("ListeRepRec.fxml"));
 //                   getResource("ListeReclamationAdmin.fxml"));
                     getResource("ReclamationClient.fxml"));                    
                     

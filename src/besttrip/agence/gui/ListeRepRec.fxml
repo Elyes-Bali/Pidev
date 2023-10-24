@@ -41,9 +41,9 @@
                      </font>
                   </Button>
                   <FontAwesomeIcon fill="WHITE" glyphName="REPLY" layoutX="39.0" layoutY="433.0" size="2em" />
-                  <ImageView fitHeight="176.0" fitWidth="179.0" layoutX="-6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="176.0" fitWidth="179.0" layoutX="-5.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../../../../../../../Desktop/385537062_1036311170830365_7812427152947813780_n.png" />
+                        <Image url="@../../../images/385537062_1036311170830365_7812427152947813780_n.png" />
                      </image>
                   </ImageView>
                   <Button fx:id="RetourListRep" layoutX="32.0" layoutY="345.0" mnemonicParsing="false" onAction="#buttonRetourListeRep" prefHeight="39.0" prefWidth="103.0" styleClass="navbutton2" text="        Retour" textFill="#fcfafa">
@@ -51,7 +51,7 @@
                         <Font name="Arial" size="15.0" />
                      </font>
                   </Button>
-                  <FontAwesomeIcon fill="WHITE" glyphName="UNDO" layoutX="35.0" layoutY="373.0" size="2em" />
+                  <FontAwesomeIcon fill="WHITE" glyphName="UNDO" layoutX="38.0" layoutY="373.0" size="2em" />
                </children>
             </AnchorPane>
             <TextField fx:id="RechercherListeRepRec" layoutX="214.0" layoutY="201.0" prefHeight="33.0" prefWidth="215.0" promptText="Rechercher par Id ou prénom" styleClass="textfield-record-design" />

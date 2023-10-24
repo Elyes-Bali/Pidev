@@ -47,7 +47,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="45.0" layoutY="283.0" size="2em" />
             <ImageView fitHeight="176.0" fitWidth="179.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Desktop/385537062_1036311170830365_7812427152947813780_n.png" />
+                  <Image url="@../../../images/385537062_1036311170830365_7812427152947813780_n.png" />
                </image>
             </ImageView>
             <Button layoutX="38.0" layoutY="324.0" mnemonicParsing="false" onAction="#buttonLogoutRecClient" prefHeight="39.0" prefWidth="103.0" styleClass="navbutton" text="        Logout" textFill="WHITE">

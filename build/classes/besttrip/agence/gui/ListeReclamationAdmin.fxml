@@ -78,7 +78,7 @@
             <FontAwesomeIcon fill="WHITE" glyphName="REPLY" layoutX="39.0" layoutY="433.0" size="2em" />
             <ImageView fitHeight="176.0" fitWidth="179.0" layoutX="-1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../../Desktop/385537062_1036311170830365_7812427152947813780_n.png" />
+                  <Image url="@../../../images/385537062_1036311170830365_7812427152947813780_n.png" />
                </image>
             </ImageView>
          </children>
