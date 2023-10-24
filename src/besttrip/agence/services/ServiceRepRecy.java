@@ -20,11 +20,11 @@ import java.util.List;
  *
  * @author zouar
  */
-public class ServiceRepRec implements IServiceRepRec<ReponseReclamation>{
+public class ServiceRepRecy implements IServiceRepRecy<ReponseReclamation>{
     Connection con;
     Statement ste;
     
-        public ServiceRepRec() {
+        public ServiceRepRecy() {
     con = MyDB.getInstance().getCnx();
 }
     @Override
@@ -46,14 +46,12 @@ public class ServiceRepRec implements IServiceRepRec<ReponseReclamation>{
           @Override
 public List<ReponseReclamation> afficher() {
     List<ReponseReclamation> reponsereclamation = new ArrayList<>();
-//    String sql = "SELECT user.idU,user.Prenom, reclamation.intitule as 'Intitulé Réclamation',reponsereclamation.textRepRec as 'Réponse' , reclamation.idRec  from Utilisateur as user   Left Join reclamation On user.idU = reclamation.idU  Left Join reponsereclamation On reclamation.idRec = reponsereclamation.idRec ";
           String sql = "SELECT user.idU,user.Prenom, reclamation.intitule,reponsereclamation.textRepRec , reclamation.idRec  from user   Left Join reclamation On user.idU = reclamation.idU  Left Join reponsereclamation On reclamation.idRec = reponsereclamation.idRec ";
 
     try {
         ste = con.createStatement();
         ResultSet rs = ste.executeQuery(sql);
         while (rs.next()) {
-//            ReponseReclamation p = new ReponseReclamation(rs.getInt("idU"), rs.getString("Prenom"), rs.getString("intitule"), rs.getString("textRepRec"), rs.getInt("idRec"));
               ReponseReclamation p = new ReponseReclamation(rs.getInt("idU"),  rs.getString("Prenom"), rs.getString("intitule"), rs.getString("textRepRec"), rs.getInt("idRec"));
               reponsereclamation.add(p);
         }

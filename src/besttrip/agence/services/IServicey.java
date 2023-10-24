@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author zouar
  */
-public interface IService<T> {
+public interface IServicey<T> {
     void ajouter(T t);
 //    void save(T t);
     void supprimer(T t);

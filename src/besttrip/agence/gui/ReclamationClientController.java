@@ -6,8 +6,12 @@
 package besttrip.agence.gui;
 
 import besttrip.agence.entity.Reclamation;
-import besttrip.agence.services.Services;
+import besttrip.agence.services.Servicesy;
+import java.io.IOException;
 import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLStreamHandler;
+import java.net.URLStreamHandlerFactory;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -17,6 +21,8 @@ import javafx.scene.Parent;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.scene.web.WebEngine;
+import javafx.scene.web.WebView;
 
 /**
  * FXML Controller class
@@ -31,13 +37,23 @@ public class ReclamationClientController implements Initializable {
     private TextField messageRecClient;
     @FXML
     private Button AcceuilRec;
-
+    @FXML
+    private WebView webview;
+    private WebEngine webEngine;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+      
+
+    // Load the HTML page containing
+
+
         // TODO
+        webEngine = webview.getEngine();
+    // Load the HTML page containing the reCAPTCHA widget
+   webEngine.load(getClass().getResource("/besttrip/agence/gui/newhtml.html").toExternalForm());
     }    
 
     @FXML
@@ -47,18 +63,34 @@ public class ReclamationClientController implements Initializable {
 //            AcceuilController dc = loader.getController();
 //            AcceuilRec.getScene().setRoot(root);
     }
+//apiBadwords
+    private String filterText(String text) {
+        // Les mots à filtrer
+        String[] filteredWords = {"mauvais mot", "débile", "bete", "stupid", "un con","hot","sexy", "chaud", "viagra", "cure", "sexuel", "amour" };
 
+        for (String word : filteredWords) {
+            String replacement = "";
+            for (int i = 0; i < word.length(); i++) {
+                replacement += "*";
+            }
+            text = text.replaceAll("(?i)\\b" + word + "\\b", replacement);
+        }
+
+        return text;
+    }
     @FXML
     private void buttonEnvoyerRecClient(ActionEvent event) {
           String intitule  = intituleRecClient.getText();        
         String textRec  = messageRecClient.getText();        
-        
+        String s1 = filterText(messageRecClient.getText());
+boolean isCaptchaValid = true;
 
-        Services ps = new Services();
+    if (isCaptchaValid) {
+        Servicesy ps = new Servicesy();
   
         Reclamation p = new Reclamation(intitule,textRec,1102,"youssef.zouari@esprit.com");
         
-       
+       p.setTextRec(s1);
         ps.ajouter(p);
 //           List<Reclamation> updatedCircuits = ps.afficher();
 //
@@ -78,8 +110,8 @@ clearTextFields();
             }
 //         else {
 //            showAlert(Alert.AlertType.INFORMATION, "", "Remplissez tous les champs", "");
-//        }
-    }
+//     }   }
+    }}
     
     private void showAlert(Alert.AlertType alertType, String title, String headerText, String contentText) {
     Alert alert = new Alert(alertType);
@@ -95,4 +127,8 @@ clearTextFields();
     
 
 }
+
+    @FXML
+    private void buttonLogoutRecClient(ActionEvent event) {
+    }
 }

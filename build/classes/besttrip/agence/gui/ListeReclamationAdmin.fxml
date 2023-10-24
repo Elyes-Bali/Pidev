@@ -1,69 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.net.URL?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" fx:id="button" prefHeight="645.0" prefWidth="924.0" style="-fx-background-color: #efd3bc;" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.agence.gui.ListeReclamationAdminController">
-    <stylesheets>
-        <URL value="@listereclamationadmin.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" fx:id="button" prefHeight="750.0" prefWidth="1120.0" styleClass="mainFxmlClass" stylesheets="@reclamationclient.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.agence.gui.ListeReclamationAdminController">
    <children>
-      <AnchorPane prefHeight="124.0" prefWidth="924.0" style="-fx-background-color: #3F7B79;">
+      <AnchorPane layoutX="178.0" prefHeight="157.0" prefWidth="944.0" styleClass="navbar2" stylesheets="@reclamationclient.css">
          <children>
-            <Label layoutX="240.0" layoutY="19.0" prefHeight="86.0" prefWidth="445.0" text="Liste des réclamations&#10;" textAlignment="CENTER" textFill="#fcfcfc" wrapText="true">
+            <Label layoutX="250.0" layoutY="26.0" prefHeight="86.0" prefWidth="445.0" text="Liste des réclamations&#10;" textAlignment="CENTER" textFill="#fcfcfc" wrapText="true">
                <font>
                   <Font name="Arial Bold" size="40.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <Button layoutX="14.0" layoutY="139.0" mnemonicParsing="false" onAction="#buttonAcceuilListeRec" prefHeight="39.0" prefWidth="71.0" style="-fx-background-radius: 10;" text="Acceuil">
-         <font>
-            <Font name="Arial" size="15.0" />
-         </font>
-      </Button>
-      <ListView fx:id="ListeRecAdmin" layoutX="364.0" layoutY="193.0" prefHeight="384.0" prefWidth="548.0" />
-      <Label layoutX="34.0" layoutY="193.0" text="User E-mail :">
+      <ListView fx:id="ListeRecAdmin" layoutX="557.0" layoutY="193.0" prefHeight="384.0" prefWidth="548.0" />
+      <Label layoutX="227.0" layoutY="193.0" text="User E-mail :">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <Label fx:id="idUserEmail" layoutX="28.0" layoutY="226.0" prefHeight="33.0" prefWidth="326.0">
+      <Label fx:id="idUserEmail" layoutX="221.0" layoutY="226.0" prefHeight="33.0" prefWidth="326.0">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
       </Label>
-      <Label layoutX="34.0" layoutY="378.0" text="Reponse :">
+      <Label layoutX="227.0" layoutY="378.0" text="Reponse :">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <TextArea fx:id="ReponceRecAdmin" layoutX="31.0" layoutY="410.0" prefHeight="167.0" prefWidth="326.0" />
-      <Button layoutX="59.0" layoutY="593.0" mnemonicParsing="false" onAction="#buttonEnvoyerRepRec" prefHeight="23.0" prefWidth="271.0" style="-fx-background-radius: 10; -fx-background-color: dodgerblue;" text="Envoyer" textFill="WHITE">
+      <TextArea fx:id="ReponceRecAdmin" layoutX="224.0" layoutY="410.0" prefHeight="167.0" prefWidth="326.0" />
+      <Button layoutX="252.0" layoutY="593.0" mnemonicParsing="false" onAction="#buttonEnvoyerRepRec" prefHeight="23.0" prefWidth="271.0" style="-fx-background-radius: 10; -fx-background-color: dodgerblue;" text="         Envoyer" textFill="WHITE">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
       </Button>
-      <Button layoutX="503.0" layoutY="593.0" mnemonicParsing="false" onAction="#buttonSupprimerRepRec" prefHeight="23.0" prefWidth="271.0" style="-fx-background-radius: 10; -fx-background-color: red;" text="Supprimer" textFill="WHITE">
+      <Button layoutX="696.0" layoutY="593.0" mnemonicParsing="false" onAction="#buttonSupprimerRepRec" prefHeight="23.0" prefWidth="271.0" style="-fx-background-radius: 10; -fx-background-color: red;" text="            Supprimer" textFill="WHITE">
          <font>
             <Font name="Arial" size="15.0" />
          </font>
       </Button>
-      <Label layoutX="34.0" layoutY="270.0" text="Message :">
+      <Label layoutX="227.0" layoutY="270.0" text="Message :">
          <font>
             <Font name="Arial Bold" size="20.0" />
          </font>
       </Label>
-      <TextArea fx:id="MessageListeRec" layoutX="31.0" layoutY="302.0" prefHeight="69.0" prefWidth="326.0" />
-      <Button layoutX="811.0" layoutY="139.0" mnemonicParsing="false" onAction="#buttonRetourListeRec" prefHeight="39.0" prefWidth="90.0" style="-fx-background-radius: 10;" text="Réponse">
-         <font>
-            <Font name="Arial" size="15.0" />
-         </font>
-      </Button>
+      <TextArea fx:id="MessageListeRec" layoutX="224.0" layoutY="302.0" prefHeight="69.0" prefWidth="326.0" />
+      <FontAwesomeIcon fill="WHITE" glyphName="SEND" layoutX="333.0" layoutY="616.0" size="2em" />
+      <FontAwesomeIcon fill="WHITE" glyphName="TRASH" layoutX="783.0" layoutY="615.0" size="2em" />
+      <AnchorPane prefHeight="750.0" prefWidth="179.0" styleClass="navbar2" stylesheets="@reclamationclient.css">
+         <children>
+            <Button layoutX="35.0" layoutY="249.0" mnemonicParsing="false" onAction="#buttonAcceuilListeRec" prefHeight="39.0" prefWidth="103.0" styleClass="navbutton2" text="       Acceuil" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="43.0" layoutY="277.0" size="2em" />
+            <Button layoutX="33.0" layoutY="325.0" mnemonicParsing="false" onAction="#buttonRetourListeRec" prefHeight="39.0" prefWidth="103.0" styleClass="navbutton2" text="     Réponse" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fill="WHITE" glyphName="PENCIL" layoutX="39.0" layoutY="353.0" size="2em" />
+            <Button layoutX="33.0" layoutY="405.0" mnemonicParsing="false" onAction="#buttonLogoutListeRec" prefHeight="39.0" prefWidth="103.0" styleClass="navbutton2" text="        Logout" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fill="WHITE" glyphName="REPLY" layoutX="39.0" layoutY="433.0" size="2em" />
+            <ImageView fitHeight="176.0" fitWidth="179.0" layoutX="-1.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Desktop/385537062_1036311170830365_7812427152947813780_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

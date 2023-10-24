@@ -11,7 +11,7 @@ import java.util.List;
  *
  * @author zouar
  */
-public interface IServiceRepRec<T> {
+public interface IServiceRepRecy<T> {
      void save(T t);
      List<T> afficher();
 }

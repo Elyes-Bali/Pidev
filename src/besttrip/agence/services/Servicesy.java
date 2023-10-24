@@ -20,12 +20,12 @@ import java.util.List;
  *
  * @author zouar
  */
-public class Services implements IService<Reclamation>{
+public class Servicesy implements IServicey<Reclamation>{
     Connection con;
     Statement ste;
    
    
-    public Services() {
+    public Servicesy() {
     con = MyDB.getInstance().getCnx();
 }
    

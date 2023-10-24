@@ -6,7 +6,7 @@
 package besttrip.agence.test;
 
 import besttrip.agence.entity.Reclamation;
-import besttrip.agence.services.Services;
+import besttrip.agence.services.Servicesy;
 
 /**
  *
@@ -21,7 +21,7 @@ public class BestTrip {
         // TODO code application logic here
         Reclamation r1= new Reclamation("bbb","tyc", 1003);
         System.out.println(r1);
-        Services rs=new Services();
+        Servicesy rs=new Servicesy();
         rs.ajouter(r1);
         
     }

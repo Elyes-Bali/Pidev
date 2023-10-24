@@ -8,8 +8,8 @@ package besttrip.agence.gui;
 import Besttrip.agence.entity.User;
 import besttrip.agence.entity.Reclamation;
 import besttrip.agence.entity.ReponseReclamation;
-import besttrip.agence.services.ServiceRepRec;
-import besttrip.agence.services.Services;
+import besttrip.agence.services.ServiceRepRecy;
+import besttrip.agence.services.Servicesy;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -72,7 +72,7 @@ public class ListeReclamationAdminController implements Initializable {
     }    
     
        private void loadInitialDataFromDatabase() {
-    Services ps = new Services();
+    Servicesy ps = new Servicesy();
     List<Reclamation> initialReclamations = ps.afficher();
     
     // Populate circuitList with the initial data from the database
@@ -89,7 +89,7 @@ public class ListeReclamationAdminController implements Initializable {
         String textRepRec  = ReponceRecAdmin.getText();
        // Replace with the appropriate method to get the user by ID
         Reclamation reclamation = ListeRecAdmin.getSelectionModel().getSelectedItem();
-        ServiceRepRec ps = new ServiceRepRec();
+        ServiceRepRecy ps = new ServiceRepRecy();
       if (reclamation != null) {
         int idRec = reclamation.getIdRec();
         User user = User.getUserById(reclamation.getIdU());
@@ -142,7 +142,7 @@ clearTextFields();
     }
 
     // Remove the selected item from the database
-    Services ps = new Services();
+    Servicesy ps = new Servicesy();
     ps.supprimer(selectedReclamation);
 
     // Remove the selected item from the ListView
@@ -168,6 +168,9 @@ clearTextFields();
         System.out.println("Error loading Start.fxml: " + ex.getMessage());
     }
     }
+
+    @FXML
+    private void buttonLogoutListeRec(ActionEvent event) {
+    }
     }
     
-
