@@ -21,6 +21,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Hyperlink;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import util.CurrentUser;
@@ -43,7 +44,10 @@ public class LoginController implements Initializable {
     private Hyperlink mdpoublie;
     @FXML
     private Hyperlink Insecrirnew;
-    
+    @FXML
+    private PasswordField password;
+      private String originalPassword = "";
+
  
 public LoginController() {
         // Initialize the Services instance in the constructor
@@ -54,6 +58,9 @@ public LoginController() {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+         password.textProperty().addListener((observable, oldValue, newValue) -> {
+        originalPassword = newValue;
+    });
         // TODO
     }    
     
@@ -63,7 +70,7 @@ public LoginController() {
     private void SEconncter(ActionEvent event) {
         Services pcd = new Services();
         String emailText = emailLogin.getText();
-        String pwdText = passwordLogin.getText();
+        String pwdText = password.getText();
         if (emailText.isEmpty() || pwdText.isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("E-mail ou  Mot de passe vide !!!");
@@ -74,7 +81,7 @@ public LoginController() {
                     User user = pcd.getLogedUser(emailText);
                     CurrentUser.setCurrentUser(user);
                     if (user.getEmail().equalsIgnoreCase("sandi.maroua@yahoo.com")) {
-                        FXMLLoader loader = new FXMLLoader(getClass().getResource("listeutilisateur.fxml"));
+                        FXMLLoader loader = new FXMLLoader(getClass().getResource("Listeutilisateur.fxml"));
                         Parent root = loader.load();
                         ListeutilisateurController dc = loader.getController();
                         emailLogin.getScene().setRoot(root);
@@ -108,10 +115,20 @@ public LoginController() {
 
     }
     
-     
+   
 
     @FXML
     private void shownpass(ActionEvent event) {
+      if (password.isVisible()) {
+        // Password is currently visible, so hide it
+        password.setVisible(false);
+        passwordLogin.setText(originalPassword);
+    } else {
+        // Password is currently hidden, so show it
+        passwordLogin.clear();
+        password.setVisible(true);
+    }
+        
     }
 
     @FXML

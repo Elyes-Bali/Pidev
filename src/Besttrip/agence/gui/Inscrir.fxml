@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
@@ -13,17 +15,14 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="842.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.InscrirController">
-    <stylesheets>
-        <URL value="@inscrir.css" />
-    </stylesheets>
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.InscrirController">
    <children>
-      <ImageView fx:id="imageInscrire" fitHeight="595.0" fitWidth="409.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="imageInscrire" fitHeight="609.0" fitWidth="397.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/El_Kef.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="517.0" layoutY="123.0" prefHeight="18.0" prefWidth="169.0" text="Créer un compte" textAlignment="CENTER">
+      <Label layoutX="531.0" layoutY="128.0" prefHeight="18.0" prefWidth="169.0" text="Créer un compte" textAlignment="CENTER">
          <font>
             <Font name="Arial Nova Bold" size="18.0" />
          </font>
@@ -44,27 +43,55 @@
             </RadialGradient>
          </textFill>
       </Label>
-      <TextField fx:id="emailInscrir" layoutX="434.0" layoutY="186.0" promptText="E-mail" style="-fx-background-radius: 10;">
+      <TextField fx:id="emailInscrir" layoutX="536.0" layoutY="314.0" promptText="E-mail" stylesheets="@login.css">
          <padding>
             <Insets top="10.0" />
-         </padding></TextField>
-      <TextField fx:id="mdpInscrire" layoutX="637.0" layoutY="186.0" promptText="Mot de passe" style="-fx-background-radius: 10;">
+         </padding>
+         <styleClass>
+            <String fx:value="textfield-record-design" />
+            <String fx:value="textheader-design" />
+         </styleClass></TextField>
+      <TextField fx:id="mdpInscrire" layoutX="539.0" layoutY="393.0" promptText="Mot de passe">
          <padding>
             <Insets top="10.0" />
-         </padding></TextField>
-      <TextField fx:id="NomU" layoutX="434.0" layoutY="256.0" promptText="Nom" style="-fx-background-radius: 10;">
+         </padding>
+         <styleClass>
+            <String fx:value="textfield-record-design" />
+            <String fx:value="textheader-design" />
+         </styleClass></TextField>
+      <TextField fx:id="NomU" layoutX="533.0" layoutY="179.0" promptText="Nom">
          <padding>
             <Insets top="10.0" />
-         </padding></TextField>
-      <TextField fx:id="prenomU" layoutX="637.0" layoutY="256.0" promptText="Prenom" style="-fx-background-repeat: 10; -fx-background-radius: 10;">
+         </padding>
+         <styleClass>
+            <String fx:value="textfield-record-design" />
+            <String fx:value="textheader-design" />
+         </styleClass></TextField>
+      <TextField fx:id="prenomU" layoutX="535.0" layoutY="246.0" promptText="Prenom">
          <padding>
             <Insets top="10.0" />
-         </padding></TextField>
-      <TextField fx:id="telIscrir" layoutX="527.0" layoutY="320.0" promptText="Téléphone" style="-fx-background-radius: 10;" />
-      <Button fx:id="sinscrir" layoutX="450.0" layoutY="389.0" mnemonicParsing="false" onAction="#Sinscrir" prefHeight="26.0" prefWidth="333.0" style="-fx-background-color: Orange; -fx-background-radius: 10;" text="S'INSCRIRE" textFill="#f2eded">
+         </padding>
+         <styleClass>
+            <String fx:value="textfield-record-design" />
+            <String fx:value="textheader-design" />
+         </styleClass></TextField>
+      <TextField fx:id="telIscrir" layoutX="540.0" layoutY="459.0" promptText="Téléphone">
+         <styleClass>
+            <String fx:value="textfield-record-design" />
+            <String fx:value="textheader-design" />
+         </styleClass></TextField>
+      <Button fx:id="sinscrir" layoutX="520.0" layoutY="525.0" mnemonicParsing="false" onAction="#Sinscrir" prefHeight="34.0" prefWidth="229.0" styleClass="navbutton" text="              S'INSCRIRE" textFill="#f2eded">
          <font>
             <Font name="Arial Black" size="12.0" />
          </font></Button>
-      <Button fx:id="exit1" layoutX="742.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit1" style="-fx-background-color: red;" text="X" textFill="#f7f2f2" />
+      <Button fx:id="exit1" layoutX="820.0" layoutY="14.0" mnemonicParsing="false" onAction="#exit1" style="-fx-background-color: red;" text="X" textFill="#f7f2f2" />
+      <FontAwesomeIcon fill="#e4a6dc" glyphName="USER" layoutX="575.0" layoutY="109.0" size="8em" styleClass="card-dashboard1" wrappingWidth="68.7999267578125" />
+      <Label fx:id="deuxiemeemail" layoutX="517.0" layoutY="363.0" prefHeight="18.0" prefWidth="138.0" textFill="#212223" />
+      <Button layoutX="683.0" layoutY="355.0" mnemonicParsing="false" onAction="#emaildeux" prefHeight="8.0" prefWidth="23.0" textFill="#faf3f3" />
+      <FontAwesomeIcon fill="#45d0f7" glyphName="CHECK" layoutX="689.0" layoutY="372.0" text="" />
    </children>
+   <stylesheets>
+      <URL value="@login" />
+      <URL value="@login.css" />
+   </stylesheets>
 </AnchorPane>

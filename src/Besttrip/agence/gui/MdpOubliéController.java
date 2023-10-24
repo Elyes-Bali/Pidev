@@ -125,19 +125,20 @@ public class MdpOubliéController implements Initializable {
             System.err.println("Erreur lors de la mise à jour du mot de passe dans la base de données : " + e.getMessage());
         }
     }
-    private boolean emailExistsInDatabase(String email) {
-         con = MyDB.getinstance().getCon();
-        String sql = "SELECT * FROM user WHERE email = ?";
-        try {
-           PreparedStatement pre = con.prepareStatement(sql);
-            pre.setString(1, email);
-              ResultSet rs = ste.executeQuery(sql);
-            return rs.next(); // Si le résultat contient des lignes, l'e-mail existe
-        } catch (SQLException e) {
-            e.printStackTrace();
-            return false; // En cas d'erreur, assumez que l'e-mail n'existe pas
-        }
+   private boolean emailExistsInDatabase(String email) {
+    con = MyDB.getinstance().getCon();
+    String sql = "SELECT * FROM user WHERE email = ?";
+    try {
+        PreparedStatement pre = con.prepareStatement(sql);
+        pre.setString(1, email);
+        ResultSet rs = pre.executeQuery(); // Use pre to execute the query
+        return rs.next(); // If the result contains rows, the email exists
+    } catch (SQLException e) {
+        e.printStackTrace();
+        return false; // In case of an error, assume the email doesn't exist
     }
+}
+
 
     private String generateRandomPassword() {
         // Générez un mot de passe aléatoire de 8 caractères (modifiable)
@@ -156,8 +157,8 @@ public class MdpOubliéController implements Initializable {
     // SMTP Configuration for Gmail
     String host = "smtp.gmail.com";
     String port = "587";
-    String username = "your-gmail-account@gmail.com"; // Replace with your Gmail address
-    String password = "your-app-password"; // Replace with your App Password
+    String username = "besttrip.esprit1@gmail.com"; // Replace with your Gmail address
+    String password = "qsfa wypu itwf miiu "; // Replace with your App Password
 
     Properties properties = new Properties();
     properties.put("mail.smtp.auth", "true");

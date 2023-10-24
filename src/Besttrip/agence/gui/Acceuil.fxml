@@ -8,12 +8,12 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.AcceuilController">
+<AnchorPane id="AnchorPane" prefHeight="700.0" prefWidth="1000.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.AcceuilController">
     <stylesheets>
         <URL value="@acceuil.css" />
     </stylesheets>
    <children>
-      <AnchorPane prefHeight="600.0" prefWidth="212.0" styleClass="navbar" stylesheets="@login.css">
+      <AnchorPane prefHeight="700.0" prefWidth="212.0" styleClass="navbar" stylesheets="@login.css">
          <children>
             <Circle fill="#414446" layoutX="102.0" layoutY="96.0" radius="82.0" stroke="BLACK" strokeType="INSIDE" />
             <Label layoutX="65.0" layoutY="202.0" text="Welcome" textFill="WHITE">
@@ -32,28 +32,54 @@
                </font>
             </Button>
             <FontAwesomeIcon fill="WHITE" glyphName="HOME" layoutX="42.0" layoutY="276.0" size="2em" wrappingWidth="10.342869758605957" />
-            <Button fx:id="event" layoutX="30.0" layoutY="309.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="         Event" textFill="WHITE">
+            <Button fx:id="event" layoutX="30.0" layoutY="309.0" mnemonicParsing="false" onAction="#event" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="         Event" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="30.0" layoutY="371.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="        Transport" textFill="WHITE">
+            <Button layoutX="30.0" layoutY="371.0" mnemonicParsing="false" onAction="#transport" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="         Transport" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button layoutX="30.0" layoutY="436.0" mnemonicParsing="false" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="         Circuit" textFill="WHITE">
+            <Button layoutX="30.0" layoutY="436.0" mnemonicParsing="false" onAction="#circuit" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="         Circuit" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
             <FontAwesomeIcon fill="WHITE" glyphName="STAR" layoutX="41.0" layoutY="341.0" size="2em" />
             <FontAwesomeIcon fill="WHITE" glyphName="PLANE" layoutX="38.0" layoutY="403.0" size="2em" />
-            <FontAwesomeIcon glyphName="STREET" layoutX="46.0" layoutY="464.0" />
+            <FontAwesomeIcon fill="WHITE" glyphName="ROAD" layoutX="39.0" layoutY="469.0" size="2em" />
             <FontAwesomeIcon glyphName="EDIT" layoutX="93.0" layoutY="152.0" size="1.5em" />
+            <Button layoutX="30.0" layoutY="499.0" mnemonicParsing="false" onAction="#hebergement" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="         Héberge" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="30.0" layoutY="564.0" mnemonicParsing="false" onAction="#reclamation" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="         Reclam" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fill="WHITE" glyphName="ROAD" layoutX="39.0" layoutY="531.0" size="2em" />
+            <FontAwesomeIcon fill="WHITE" glyphName="CLIPBOARD" layoutX="39.0" layoutY="596.0" size="2em" />
+            <Button fx:id="forum" layoutX="30.0" layoutY="630.0" mnemonicParsing="false" onAction="#forum" prefHeight="48.0" prefWidth="151.0" styleClass="navbutton" stylesheets="@login.css" text="        Forum" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fill="WHITE" glyphName="FORUMBEE" layoutX="39.0" layoutY="662.0" size="2em" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="212.0" layoutY="35.0" prefHeight="117.0" prefWidth="788.0" styleClass="card-top" stylesheets="@login.css" />
-      <AnchorPane layoutX="212.0" layoutY="138.0" prefHeight="462.0" prefWidth="788.0" />
+      <AnchorPane layoutX="212.0" layoutY="-4.0" prefHeight="157.0" prefWidth="788.0" styleClass="card-top" stylesheets="@login.css">
+         <children>
+            <Button fx:id="deconn" layoutX="609.0" layoutY="62.0" mnemonicParsing="false" onAction="#deconnecter" prefHeight="48.0" prefWidth="164.0" styleClass="logout-button" stylesheets="@login.css" text="        Déconx" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <FontAwesomeIcon fill="WHITE" glyphName="SIGN-OUT" layoutX="626.0" layoutY="94.0" size="2em" />
+         </children></AnchorPane>
+      <AnchorPane layoutX="212.0" layoutY="154.0" prefHeight="546.0" prefWidth="788.0" />
    </children>
 </AnchorPane>

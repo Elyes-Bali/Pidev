@@ -32,6 +32,10 @@ public class AcceuilController implements Initializable {
 
     @FXML
     private Button home;
+    @FXML
+    private Button forum;
+    @FXML
+    private Button deconn;
        
 
     /**
@@ -59,12 +63,37 @@ public class AcceuilController implements Initializable {
         }
     }
 
-    @FXML
-    private void Even(ActionEvent event) {
-    }
 
     void setUserInformation(User user) {
       
+    }
+
+    @FXML
+    private void event(ActionEvent event) {
+    }
+
+    @FXML
+    private void transport(ActionEvent event) {
+    }
+
+    @FXML
+    private void circuit(ActionEvent event) {
+    }
+
+    @FXML
+    private void hebergement(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void forum(ActionEvent event) {
+    }
+
+    @FXML
+    private void deconnecter(ActionEvent event) {
     }
     
 }

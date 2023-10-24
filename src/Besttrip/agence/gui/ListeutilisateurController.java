@@ -34,6 +34,7 @@ public class ListeutilisateurController implements Initializable {
     private ListView<User> ListeUser;
     @FXML
     private ImageView imageListe;
+    
     private ObservableList<User> ListU =FXCollections.observableArrayList();
     @FXML
     private TextField idD;
@@ -45,8 +46,13 @@ public class ListeutilisateurController implements Initializable {
     private TextField prenomD;
     @FXML
     private TextField Txtrecherche;
-      @FXML
      private FilteredList<User> filteredUsers; 
+    @FXML
+    private Button home;
+    @FXML
+    private Button forum;
+    @FXML
+    private Button ListRec;
     /**
      * Initializes the controller class.
      */
@@ -125,8 +131,33 @@ public class ListeutilisateurController implements Initializable {
             String lowerCaseFilter = searchQuery.toLowerCase();
             return user.getNom().toLowerCase().contains(lowerCaseFilter)
                     || user.getPrenom().toLowerCase().contains(lowerCaseFilter)
-                    || user.getEmail().toLowerCase().contains(lowerCaseFilter);
+                    || user.getEmail().toLowerCase().contains(lowerCaseFilter)
+                    || user.getIdU() == Integer.parseInt(lowerCaseFilter);
         });
+    }
+
+    @FXML
+    private void transport(ActionEvent event) {
+    }
+
+    @FXML
+    private void circuit(ActionEvent event) {
+    }
+
+    @FXML
+    private void hebergement(ActionEvent event) {
+    }
+
+    @FXML
+    private void reclamation(ActionEvent event) {
+    }
+
+    @FXML
+    private void forum(ActionEvent event) {
+    }
+
+    @FXML
+    private void listRec(ActionEvent event) {
     }
     
     

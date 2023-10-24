@@ -64,7 +64,7 @@
 
 .textheader-design:hover{
 
-    -fx-border-color:linear-gradient(to bottom right, rgba(121, 172, 255, 0.6), rgba(255, 106, 239, 0.6));
+    -fx-border-color:linear-gradient(to bottom right, #7ee1ee, #1d58e2);
     -fx-border-width:0px 0px 5px 0px;
 
 }
@@ -275,4 +275,16 @@
 
     -fx-background-color:linear-gradient(to bottom right, rgba(121, 172, 255, 0.6), rgba(255, 106, 239, 0.6));
 
+}
+/*/////admin ///*/
+.navbar2{
+
+    -fx-background-color:linear-gradient(to bottom right, #F6AC97, #FFB6C1);
+
+}
+.navbutton2{
+
+    -fx-background-color:linear-gradient(to bottom right, #EE9E94, #FFB777);
+    -fx-cursor:hand;
+    -fx-alignment:CENTER-LEFT;
 }

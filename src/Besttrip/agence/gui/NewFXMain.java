@@ -13,8 +13,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -22,8 +24,11 @@ import javafx.stage.Stage;
  */
 public class NewFXMain extends Application {
     
+    
+      private double x = 0 ;
+    private double y = 0;
     @Override
-    public void start(Stage primaryStage) {
+     public void start(Stage primaryStage) {
        Parent root ;
        try{
        root = FXMLLoader.load(getClass().
@@ -37,13 +42,14 @@ public class NewFXMain extends Application {
        }catch(IOException ex){
        System.out.println(ex.getMessage());
        }
+    
+
+        
+
     }
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        launch(args);
+        launch();
     }
     
 }
