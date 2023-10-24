@@ -28,9 +28,9 @@ public class NewFXMain extends Application {
         //Reservation backend
      
         //Reservation Transport
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/tn/esprit/gui/Transport.fxml"));
+        //FXMLLoader loader = new FXMLLoader(getClass().getResource("/tn/esprit/gui/Transport.fxml"));
         //Reservation Transport + reservation backend
-       // FXMLLoader loader = new FXMLLoader(getClass().getResource("/tn/esprit/gui/AffichageTransport.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/tn/esprit/gui/AffichageTransport.fxml"));
         Parent root = loader.load();
 
         
