@@ -6,13 +6,16 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane id="AnchorPane" prefHeight="541.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.gui.ConsulterReservationController">
    <children>
       <ImageView fitHeight="499.0" fitWidth="275.0" pickOnBounds="true">
          <image>
-            <Image url="@../../besttrip2/393175612_720309503309435_3005949043888996066_n.jpg" />
+            <Image url="@../../besttrip2/80241bfa1b4443a2684b9c9cc62094b1.jpg" />
          </image>
       </ImageView>
       <TableView fx:id="table" layoutX="275.0" prefHeight="541.0" prefWidth="355.0">
@@ -23,12 +26,28 @@
             <TableColumn fx:id="num" prefWidth="68.0" text="N°Places" />
         </columns>
       </TableView>
-      <Button fx:id="btn1" layoutY="494.0" mnemonicParsing="false" onAction="#back" prefHeight="44.0" prefWidth="129.0" style="-fx-background-color: Black;" text="Back" textFill="WHITE">
+      <Button fx:id="btn1" layoutY="494.0" mnemonicParsing="false" onAction="#back" prefHeight="44.0" prefWidth="129.0" style="-fx-background-color: #BC8F8F;" text="Retour">
          <font>
             <Font size="20.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Button>
-      <Button fx:id="btn2" layoutX="120.0" layoutY="494.0" mnemonicParsing="false" onAction="#cancel" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: Black;" text="Validate" textFill="WHITE">
+      <Button fx:id="btn2" layoutX="125.0" layoutY="494.0" mnemonicParsing="false" onAction="#cancel" prefHeight="44.0" prefWidth="150.0" style="-fx-background-color: #BC8F8F;" text="Valider" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>

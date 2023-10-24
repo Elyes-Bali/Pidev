@@ -9,74 +9,205 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="638.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.gui.AjouterEventsController">
+<AnchorPane id="AnchorPane" prefHeight="574.0" prefWidth="638.0" stylesheets="@ok.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="besttrip.gui.AjouterEventsController">
    <children>
       <ImageView fitHeight="574.0" fitWidth="255.0" pickOnBounds="true">
          <image>
-            <Image url="@../../besttrip2/360_F_313597831_Bv3LoRBJnZU7ggCQIPUtVDOdju2Ksqfu.jpg" />
+            <Image url="@../../besttrip2/27073939f1547ff2e06e6e9805b95d7f.jpg" />
          </image>
       </ImageView>
-      <Label layoutX="261.0" layoutY="14.0" prefHeight="39.0" prefWidth="98.0" text="Nom" textFill="#252525">
+      <Label layoutX="261.0" layoutY="14.0" prefHeight="39.0" prefWidth="98.0" text="Nom:">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7568627595901489" green="0.250980406999588" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43921568989753723" green="0.13333334028720856" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextField fx:id="t1" layoutX="394.0" layoutY="14.0" prefHeight="39.0" prefWidth="228.0" promptText="Nom_Evenments" />
-      <Label layoutX="261.0" layoutY="107.0" prefHeight="39.0" prefWidth="137.0" text="DateDebut" textFill="#252525">
+      <TextField fx:id="t1" layoutX="394.0" layoutY="14.0" prefHeight="39.0" prefWidth="228.0" promptText="Nom_Evenments" styleClass="label-record-design" stylesheets="@ok.css" />
+      <Label layoutX="261.0" layoutY="107.0" prefHeight="39.0" prefWidth="137.0" text="Date début:">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7568627595901489" green="0.250980406999588" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43921568989753723" green="0.13333334028720856" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <DatePicker fx:id="t2" layoutX="394.0" layoutY="110.0" prefHeight="33.0" prefWidth="228.0" promptText="aaaa-mm-jj" />
-      <Label layoutX="261.0" layoutY="163.0" prefHeight="39.0" prefWidth="152.0" text="Description" textFill="#252525">
+      <DatePicker fx:id="t2" layoutX="394.0" layoutY="110.0" prefHeight="33.0" prefWidth="228.0" promptText="aaaa-mm-jj" styleClass="label-record-design" />
+      <Label layoutX="261.0" layoutY="163.0" prefHeight="39.0" prefWidth="152.0" text="Description:">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7568627595901489" green="0.250980406999588" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43921568989753723" green="0.13333334028720856" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextArea fx:id="t3" layoutX="394.0" layoutY="163.0" prefHeight="61.0" prefWidth="228.0" promptText="Decrire ...." />
-      <ComboBox fx:id="t4" layoutX="394.0" layoutY="287.0" prefHeight="33.0" prefWidth="228.0" promptText="Selectioner" />
-      <Label layoutX="261.0" layoutY="284.0" prefHeight="39.0" prefWidth="152.0" text="Categorie" textFill="#252525">
+      <TextArea fx:id="t3" layoutX="394.0" layoutY="163.0" prefHeight="61.0" prefWidth="228.0" promptText="Decrire ...." styleClass="label-record-design" />
+      <ComboBox fx:id="t4" layoutX="394.0" layoutY="287.0" prefHeight="33.0" prefWidth="228.0" promptText="Selectioner" styleClass="label-record-design" />
+      <Label layoutX="261.0" layoutY="284.0" prefHeight="39.0" prefWidth="152.0" text="Categorie:">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7568627595901489" green="0.250980406999588" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43921568989753723" green="0.13333334028720856" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextField fx:id="t5" layoutX="394.0" layoutY="343.0" prefHeight="39.0" prefWidth="228.0" promptText="Ecrire Place De Evenenmts" />
-      <Label layoutX="261.0" layoutY="343.0" prefHeight="39.0" prefWidth="98.0" text="Lieu" textFill="#252525">
+      <TextField fx:id="t5" layoutX="394.0" layoutY="343.0" prefHeight="39.0" prefWidth="228.0" promptText="Ecrire Place De Evenenmts" styleClass="label-record-design" />
+      <Label layoutX="261.0" layoutY="343.0" prefHeight="39.0" prefWidth="98.0" text="Lieu:">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7565789222717285" green="0.25044164061546326" blue="0.25044164061546326" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43921568989753723" green="0.13333334028720856" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label layoutX="261.0" layoutY="394.0" prefHeight="39.0" prefWidth="98.0" text="Image" textFill="#252525">
+      <Label layoutX="261.0" layoutY="394.0" prefHeight="39.0" prefWidth="98.0" text="Image:">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7568627595901489" green="0.250980406999588" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43921568989753723" green="0.13333334028720856" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextField fx:id="t6" layoutX="394.0" layoutY="394.0" prefHeight="39.0" prefWidth="126.0" promptText="choisir une image" />
-      <Button fx:id="btn1" layoutX="394.0" layoutY="461.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="33.0" prefWidth="98.0" style="-fx-background-color: yellow;" text="Ajouter">
+      <TextField fx:id="t6" layoutX="394.0" layoutY="394.0" prefHeight="39.0" prefWidth="126.0" promptText="choisir une image" styleClass="label-record-design" />
+      <Button fx:id="btn1" layoutX="523.0" layoutY="490.0" mnemonicParsing="false" onAction="#Ajouter" prefHeight="33.0" prefWidth="98.0" style="-fx-background-color: #BC8F8F;" styleClass="insert-button" text="Ajouter">
          <font>
             <Font size="21.0" />
          </font>
       </Button>
-      <Button fx:id="btn2" layoutX="515.0" layoutY="461.0" mnemonicParsing="false" onAction="#back" prefHeight="33.0" prefWidth="98.0" style="-fx-background-color: yellow;" text="Back">
+      <Button fx:id="btn2" layoutX="359.0" layoutY="489.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="98.0" styleClass="update-button" text="Retour">
          <font>
             <Font size="21.0" />
          </font>
       </Button>
-      <Label layoutX="261.0" layoutY="59.0" prefHeight="39.0" prefWidth="98.0" text="Tarif" textFill="#252525">
+      <Label layoutX="261.0" layoutY="59.0" prefHeight="39.0" prefWidth="98.0" text="Tarif:">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7568627595901489" green="0.250980406999588" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43921568989753723" green="0.13333334028720856" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextField fx:id="t7" layoutX="394.0" layoutY="59.0" prefHeight="39.0" prefWidth="228.0" promptText="0,00 TND" />
-      <Label layoutX="261.0" layoutY="230.0" prefHeight="39.0" prefWidth="98.0" text="N°Place" textFill="#252525">
+      <TextField fx:id="t7" layoutX="394.0" layoutY="59.0" prefHeight="39.0" prefWidth="228.0" promptText="0,00 TND" styleClass="label-record-design" />
+      <Label layoutX="261.0" layoutY="230.0" prefHeight="39.0" prefWidth="98.0" text="N°Places:">
          <font>
             <Font name="System Bold" size="21.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.7568627595901489" green="0.250980406999588" blue="0.250980406999588" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.43921568989753723" green="0.13333334028720856" blue="0.13333334028720856" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextField fx:id="t8" layoutX="394.0" layoutY="230.0" prefHeight="39.0" prefWidth="228.0" promptText="xx Places" />
-      <Button fx:id="btn11" layoutX="526.0" layoutY="394.0" mnemonicParsing="false" onAction="#importer" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: yellow;" text="Importer">
+      <TextField fx:id="t8" layoutX="394.0" layoutY="230.0" prefHeight="39.0" prefWidth="228.0" promptText="xx Places" styleClass="label-record-design" />
+      <Button fx:id="btn11" layoutX="526.0" layoutY="394.0" mnemonicParsing="false" onAction="#importer" prefHeight="39.0" prefWidth="91.0" styleClass="insert-button" text="Importer" textFill="#24f6fa">
          <font>
             <Font size="15.0" />
          </font>

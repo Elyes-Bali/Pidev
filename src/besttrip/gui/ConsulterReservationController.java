@@ -102,7 +102,7 @@ public class ConsulterReservationController implements Initializable {
         row.itemProperty().addListener((obs, previousReservation, currentReservation) -> {
             if (currentReservation != null) {
                 if (currentReservation.isValidate()) {
-                    row.setStyle("-fx-background-color: green;"); // Set the row color to green for valid reservations
+                    row.setStyle("-fx-background-color: #008080;"); // Set the row color to blue for valid reservations
                 }  
             }
         });

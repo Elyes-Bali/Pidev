@@ -32,6 +32,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.stage.Stage;
 import javafx.util.Pair;
 import javax.smartcardio.Card;
  
@@ -127,12 +128,16 @@ private void showNoEventsAlert() {
             ServiceEvent sc1 =new ServiceEvent();
                 sc1.modifier(event1);
             descriptionLabel.setText("place :"+String.valueOf(newNumberOfSeatsAvailable));
+            showQRCodeStage();
+                closeCurrentStage();
           }
         } catch (Exception ex) {
             // Gérez les exceptions
         }
     });
 });
+        
+        
         HBox buttonBox = new HBox(reserveButton);
         buttonBox.setAlignment(Pos.CENTER_RIGHT);
         VBox.setMargin(buttonBox, new Insets(0, 10, 0, 0));
@@ -144,6 +149,23 @@ private void showNoEventsAlert() {
         setPrefHeight(250);
         getStyleClass().add("product-card");
     }
+    
+    private void showQRCodeStage() {
+    JavaFX_QRCodeWriterController qrCodeWriterController = new JavaFX_QRCodeWriterController();
+    qrCodeWriterController.start(new Stage());
+}
+
+private void closeCurrentStage() {
+    Stage currentStage = (Stage) eventsTilePane.getScene().getWindow();
+    currentStage.close();
+}
+//In this modified code, after a successful reservation, the showQRCodeStage() method is called to display the QR code window using the JavaFX_QRCodeWriterController. Then, the closeCurrentStage() method is called to close the current stage (AffichageEventFrontController). This approach ensures that the QR code window is displayed after a successful reservation, and the reservation window is closed.
+
+
+
+
+
+
 
         private void showAlert(AlertType alertType, String title, String headerText, String contentText) {
     Alert alert = new Alert(alertType);
