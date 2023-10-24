@@ -1,0 +1,1 @@
+Besttrip.agence.gui.JavaFX_QRCodeWriter
