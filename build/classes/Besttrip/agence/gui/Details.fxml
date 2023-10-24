@@ -1,78 +1,151 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="688.0" prefWidth="1039.0" style="-fx-background-color: #efd3bc;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.DetailsController">
+<AnchorPane id="AnchorPane" prefHeight="800.0" prefWidth="600.0" stylesheets="@DetailsDesign.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.DetailsController">
    <children>
-      <Label layoutX="241.0" layoutY="39.0" text="Depart :" textFill="#031cff">
+      <Label layoutX="382.0" layoutY="211.0" text="Depart :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.019999999552965164" blue="0.8669289350509644" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label layoutX="239.0" layoutY="76.0" text="Arrive :" textFill="#0015ff">
+      <Label layoutX="719.0" layoutY="211.0" text="Arrive :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.019999999552965164" blue="0.8669289350509644" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label layoutX="239.0" layoutY="162.0" text="Temps :" textFill="#0009ff">
+      <Label layoutX="380.0" layoutY="334.0" text="Temps :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8100000023841858" green="0.12960000336170197" blue="0.6968877911567688" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label layoutX="240.0" layoutY="209.0" text="Prix :" textFill="#0022ff">
+      <Label layoutX="381.0" layoutY="381.0" text="Prix :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8100000023841858" green="0.12960000336170197" blue="0.6968877911567688" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label layoutX="243.0" layoutY="260.0" text="Description :" textFill="BLUE">
+      <Label layoutX="396.0" layoutY="434.0" text="Description :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8100000023841858" green="0.12960000336170197" blue="0.6968877911567688" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label fx:id="Pdepart" layoutX="337.0" layoutY="33.0" style="-fx-underline: true;" text="desc">
+      <Label fx:id="Pdepart" layoutX="478.0" layoutY="205.0" style="-fx-underline: true;" text="desc">
          <font>
             <Font name="Dubai Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="Parrive" layoutX="337.0" layoutY="69.0" style="-fx-underline: true;" text="arrive">
+      <Label fx:id="Parrive" layoutX="819.0" layoutY="205.0" style="-fx-underline: true;" text="arrive">
          <font>
             <Font name="Dubai Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="Ptemps" layoutX="336.0" layoutY="155.0" style="-fx-underline: true;" text="temps">
+      <Label fx:id="Ptemps" layoutX="477.0" layoutY="327.0" style="-fx-underline: true;" text="temps">
          <font>
             <Font name="Dubai Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="Pprix" layoutX="338.0" layoutY="202.0" style="-fx-underline: true;" text="prix">
+      <Label fx:id="Pprix" layoutX="479.0" layoutY="374.0" style="-fx-underline: true;" text="prix">
          <font>
             <Font name="Dubai Bold" size="24.0" />
          </font>
       </Label>
-      <TextArea fx:id="Pdescription" editable="false" layoutX="235.0" layoutY="300.0" prefHeight="114.0" prefWidth="315.0" promptText="description">
+      <TextArea fx:id="Pdescription" editable="false" layoutX="383.0" layoutY="483.0" prefHeight="190.0" prefWidth="315.0" promptText="description" styleClass="label-record-design">
          <font>
             <Font name="Dubai Bold" size="18.0" />
          </font>
       </TextArea>
-      <Button layoutX="1001.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: red; -fx-background-radius: 5;" text="X" textFill="WHITE" />
-      <AnchorPane fx:id="achro" prefHeight="694.0" prefWidth="230.0" styleClass="navbar" stylesheets="@DetailsDesign.css">
+      <AnchorPane fx:id="achro" prefHeight="800.0" prefWidth="230.0" styleClass="navbar" stylesheets="@DetailsDesign.css">
          <children>
-            <Label layoutX="3.0" layoutY="176.0" prefHeight="222.0" prefWidth="224.0" text="Plus de détails&#10;&#10;&#10; sur le voyage" textFill="WHITE">
-               <font>
-                  <Font name="Cooper Black" size="30.0" />
-               </font>
-            </Label>
-            <Label layoutX="10.0" layoutY="31.0" prefHeight="30.0" prefWidth="211.0" text="Agence BestTrip" textFill="WHITE">
-               <font>
-                  <Font name="Cooper Black" size="24.0" />
-               </font>
-            </Label>
             <Label layoutX="29.0" layoutY="424.0" text="ISO :" visible="false">
                <font>
                   <Font name="Bell MT Bold" size="24.0" />
@@ -85,46 +158,115 @@
             </Label>
          </children>
       </AnchorPane>
-      <TextArea fx:id="newsTextArea" layoutX="235.0" layoutY="484.0" prefHeight="182.0" prefWidth="315.0" />
-      <Label layoutX="242.0" layoutY="431.0" text="Nouvelles :">
+      <TextArea fx:id="newsTextArea" layoutX="720.0" layoutY="483.0" prefHeight="182.0" prefWidth="315.0" styleClass="label-record-design" />
+      <Label layoutX="720.0" layoutY="434.0" text="Nouvelles :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8100000023841858" green="0.12960000336170197" blue="0.6968877911567688" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label layoutX="609.0" layoutY="40.0" text="Températures :">
+      <Label layoutX="720.0" layoutY="295.0" text="Températures :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8100000023841858" green="0.12960000336170197" blue="0.6968877911567688" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <ImageView fitHeight="70.0" fitWidth="54.0" layoutX="886.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="70.0" fitWidth="54.0" layoutX="997.0" layoutY="283.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/meteo1.png" />
          </image>
       </ImageView>
-      <Label fx:id="Pweather" layoutX="784.0" layoutY="40.0" text="meteo">
+      <Label fx:id="Pweather" layoutX="895.0" layoutY="295.0" text="meteo">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
       </Label>
-      <Label layoutX="609.0" layoutY="116.0" text="Détailes :">
+      <Label layoutX="720.0" layoutY="371.0" text="Détailes :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8100000023841858" green="0.12960000336170197" blue="0.6968877911567688" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <TextArea fx:id="Weatherdesc" layoutX="717.0" layoutY="106.0" prefHeight="50.0" prefWidth="211.0" />
-      <Label layoutX="239.0" layoutY="116.0" text="Pays :" textFill="#0011ff">
+      <TextArea fx:id="Weatherdesc" layoutX="828.0" layoutY="361.0" prefHeight="50.0" prefWidth="211.0" styleClass="label-record-design" />
+      <Label layoutX="380.0" layoutY="272.0" text="Pays :">
          <font>
             <Font name="Bell MT Bold" size="24.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.6969697105162072">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.3137255012989044" green="0.12941177189350128" blue="0.8196078538894653" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.8100000023841858" green="0.12960000336170197" blue="0.6968877911567688" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Label fx:id="Ppays" layoutX="337.0" layoutY="109.0" style="-fx-underline: true;" text="country">
+      <Label fx:id="Ppays" layoutX="478.0" layoutY="265.0" style="-fx-underline: true;" text="country">
          <font>
             <Font name="Dubai Bold" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="922.0" layoutY="622.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="79.0" style="-fx-background-radius: 15;" styleClass="navbutton" stylesheets="@DetailsDesign.css" text="Reserver" textAlignment="CENTER" textFill="WHITE">
+      <Button layoutX="625.0" layoutY="715.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="190.0" style="-fx-background-radius: 15;" styleClass="navbutton" stylesheets="@DetailsDesign.css" text="               Reserver" textAlignment="CENTER" textFill="WHITE">
          <font>
-            <Font size="15.0" />
+            <Font name="Arial" size="15.0" />
          </font></Button>
+      <AnchorPane layoutX="230.0" prefHeight="182.0" prefWidth="938.0" styleClass="navbar">
+         <children>
+            <Button layoutX="962.0" layoutY="14.0" mnemonicParsing="false" onAction="#returnHome" style="-fx-background-color: red; -fx-background-radius: 5;" text="X" textFill="WHITE" />
+         </children></AnchorPane>
+      
    </children>
 </AnchorPane>
