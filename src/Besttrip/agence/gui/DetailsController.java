@@ -227,4 +227,16 @@ newsTextArea.setWrapText(true);
         System.out.println("Error loading Start.fxml: " + ex.getMessage());
     }
     }
+
+    @FXML
+    private void navTransport(ActionEvent event) {
+    }
+
+    @FXML
+    private void navCircuit(ActionEvent event) {
+    }
+
+    @FXML
+    private void navEvent(ActionEvent event) {
+    }
 }
