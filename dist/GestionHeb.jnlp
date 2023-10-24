@@ -8,7 +8,7 @@
   </information>
   <resources>
     <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
-    <jar href="GestionHeb.jar" size="350316" download="eager" />
+    <jar href="GestionHeb.jar" size="352490" download="eager" />
     <jar href="lib\commons-codec-1.15.jar" size="353793" download="eager" />
     <jar href="lib\commons-io-2.7.jar" size="276413" download="eager" />
     <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
@@ -33,6 +33,6 @@
   <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="GestionHeb" >
     <param name="requiredFXVersion" value="8.0+"/>
   </applet-desc>
-  <jfx:javafx-desc  width="800" height="600" main-class="gui.GestionHeb"  name="GestionHeb" />
+  <jfx:javafx-desc  width="800" height="600" main-class="Besttrip.agence.gui.GestionHeb"  name="GestionHeb" />
   <update check="always"/>
 </jnlp>

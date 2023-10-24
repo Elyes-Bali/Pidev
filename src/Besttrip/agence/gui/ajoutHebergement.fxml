@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addHebPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1233.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Besttrip.agence.gui.AjoutHebergementController">
+   <children>
+      <Label layoutX="171.0" layoutY="229.0" prefHeight="17.0" prefWidth="57.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Capacité :" />
+      <Label layoutX="171.0" layoutY="271.0" prefHeight="17.0" prefWidth="57.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Prix :" />
+      <Label layoutX="171.0" layoutY="312.0" prefHeight="17.0" prefWidth="57.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Adresse :" />
+      <Label layoutX="171.0" layoutY="352.0" prefHeight="18.0" prefWidth="86.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Catégorie :" />
+      <TextField fx:id="textCap" layoutX="273.0" layoutY="225.0" prefHeight="26.0" prefWidth="216.0" promptText="Capacité" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+      <TextField fx:id="textPrix" layoutX="273.0" layoutY="267.0" prefHeight="26.0" prefWidth="216.0" promptText="Prix" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+      <TextField fx:id="textAdresse" layoutX="273.0" layoutY="308.0" prefHeight="26.0" prefWidth="216.0" promptText="Adresse" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+      <Label layoutX="170.0" layoutY="428.0" prefHeight="18.0" prefWidth="86.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Description :" />
+      <TextArea fx:id="textDescription" layoutX="271.0" layoutY="428.0" prefHeight="60.0" prefWidth="216.0" promptText="Description" styleClass="textarea" stylesheets="@dashboardDesign.css" />
+      <Button fx:id="btnAddCateg" layoutX="420.0" layoutY="550.0" mnemonicParsing="false" onAction="#AjoutHebergement" prefHeight="34.0" prefWidth="66.0" styleClass="btn" stylesheets="@dashboardDesign.css" text="Add" />
+      <Button fx:id="btnClearCateg" layoutX="328.0" layoutY="551.0" mnemonicParsing="false" onAction="#clearFieldsHebergement" prefHeight="34.0" prefWidth="77.0" styleClass="btn" stylesheets="@dashboardDesign.css" text="Clear" />
+      <Label layoutX="171.0" layoutY="391.0" prefHeight="18.0" prefWidth="86.0" styleClass="label-ajout" stylesheets="@dashboardDesign.css" text="Type :" />
+      <Label layoutX="191.0" layoutY="102.0" prefHeight="52.0" prefWidth="283.0" text="Ajouter une Hébergement" textFill="#ffb900">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnReturnAct" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#return_ListHebergement" prefHeight="34.0" prefWidth="66.0" styleClass="btn" stylesheets="@dashboardDesign.css">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/return.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+      <ComboBox fx:id="textCateg" layoutX="273.0" layoutY="348.0" prefHeight="26.0" prefWidth="216.0" promptText="Catégorie" styleClass="comboBox" stylesheets="@dashboardDesign.css" />
+      <ImageView fitHeight="424.0" fitWidth="425.0" layoutX="680.0" layoutY="211.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/5783695.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="textType" layoutX="272.0" layoutY="387.0" prefHeight="26.0" prefWidth="216.0" promptText="Type" styleClass="textfield" stylesheets="@dashboardDesign.css" />
+   </children>
+</AnchorPane>
