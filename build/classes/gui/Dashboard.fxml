@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DashboardController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DashboardController">
    <children>
       <AnchorPane fx:id="main_form" prefHeight="200.0" prefWidth="200.0">
          <children>
@@ -20,9 +20,9 @@
                      <children>
                         <AnchorPane layoutY="-22.0" prefHeight="560.0" prefWidth="200.0" styleClass="nav-form" stylesheets="@dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <children>
-                              <ImageView fitHeight="112.0" fitWidth="170.0" layoutX="40.0" layoutY="47.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="148.0" fitWidth="130.0" layoutX="31.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/icons8-planning-67.png" />
+                                    <Image url="@../images/logo.png" />
                                  </image>
                               </ImageView>
                               <Button fx:id="btnHome" layoutY="230.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="265.0" styleClass="nav-btn" stylesheets="@dashboardDesign.css" text="Home" textFill="WHITE">

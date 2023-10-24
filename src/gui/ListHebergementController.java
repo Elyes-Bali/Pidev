@@ -335,7 +335,7 @@ public class ListHebergementController implements Initializable {
 
         if (selectedFile != null) {
             // Générer le fichier PDF avec l'emplacement de sauvegarde sélectionné
-            // Récupérer la liste des produits
+            // Récupérer la liste 
             HebergementService as = new HebergementService();
             List<Hebergement> HebergementList = as.Show();
 
