@@ -2,9 +2,9 @@ package javafxtransport;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import tn.esprit.Services.ServiceTransport;
-import tn.esprit.entity.Transport;
-import tn.esprit.tools.MyDB;
+import Besttrip.agence.services.ServiceTransport;
+import Besttrip.agence.entity.Transport;
+import Besttrip.agence.tools.MyDB;
 
 public class JavaFXTransport extends Application {
     
